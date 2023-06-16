@@ -1,0 +1,18 @@
+body {
+    background-color: lightpink;
+}
+#lable-def {
+    margin-bottom:100px ;
+    margin-left: 50%;
+}
+#input-area {
+    height: 30px;
+    width: 150px;
+    margin-left: 50%;
+}
+#click-button {
+    height: 30px;
+    width: 150px;
+    margin-left: 50%;
+    border-radius: 10px;
+}

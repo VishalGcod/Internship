@@ -1,0 +1,82 @@
+.header{
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  padding: 40px 0px 0px 0px;
+}
+.sub-drop,.head-logo,.head-search,.v-search,.rec-vid,.vid-notify,.acc-login{
+  color: white;
+}
+img{
+  height: 100px;
+  width: 150px;
+}
+.left-nav{
+  line-height: 45px;
+  width: 125px;
+  margin-left: 10px;
+}
+input{
+  height: 35px;
+  width: 250px;
+  border-radius: 15px;
+}
+.sub-header{
+  display: flex;
+  color: black;
+  justify-content: space-around;
+  padding: 10px 0px 0px 0px;
+  background-color: lightgrey;
+}
+.sub-all,.sub-music,.sub-sports,.sub-games,.sub-funny,.sub-cats,.sub-horror{
+  border: 1px solid lightgrey;
+}
+.head-logo{
+  margin-top: -37px;
+
+}
+
+.grid-columns{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: -550px;
+  margin-left: 130px;
+  column-gap: 35px;
+  height: 250px;
+  margin-right: 10px;
+
+}
+.f-grid{
+  background-color: lightgrey;
+}
+.s-grid{
+  background-color: lightgrey;
+}
+.t-grid{
+  background-color: lightgrey;
+}
+.f-grid2{
+  background-color: lightgrey;
+}
+.s-grid2{
+  background-color: lightgrey;
+}
+.t-grid2{
+  background-color: lightgrey;
+}
+.grid-columns2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 100px;
+  margin-left: 130px;
+  margin-right: 10px;
+  column-gap: 35px;
+  height: 250px;
+}
+.acc-login{
+  height: 30px;
+  width: 30px;
+}

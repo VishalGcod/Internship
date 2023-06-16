@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./inputtry.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label id="lable-def">Enter Age</label>
+    <br />
+    <input id="input-area" type="search" placeholder="type your age" />
+    <br />
+    <button id="click-button" onclick="print()">click</button>
+    <br />
+    <p id="out"></p>
+    <script>
+      let input = document.getElementById("input-area");
+      function print() {
+        out.innerHTML = input.value;
+      }
+    </script>
+  </body>
+</html>

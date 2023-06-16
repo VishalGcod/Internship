@@ -1,0 +1,40 @@
+#header-tag {
+  padding: 10px;
+  background: linear-gradient(orange, rgb(249, 160, 160), purple);
+  border-radius: 15px;
+}
+nav {
+  background-color: rgb(167, 161, 250);
+}
+span {
+  font-size: 30px;
+  color: white;
+  margin-left: 230px;
+}
+footer {
+  background-color: blanchedalmond;
+  padding-top: 150px;
+}
+main {
+    padding: 15px;
+  background-color: rgb(31, 178, 227);
+}
+article {
+    border-radius: 10px;
+  background-color: rgb(247, 193, 231);
+}
+td,
+table,
+tr,
+th {
+  color: rgb(255, 119, 0);
+  background-color: rgb(47, 46, 84);
+  width: 750px;
+  height: 55px;
+  border-radius: 25px;
+  border: 2px solid rgb(255, 255, 255);
+  border-collapse: collapse;
+}
+td{
+    padding: 25px;
+}
