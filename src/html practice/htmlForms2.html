@@ -1,13 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <input type="file" name="file" autofocus>
-    <input type="date" name="sdate" max="2023-01-01" min="2000-01-01">
-    
-</body>
+    <style>
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+      p {
+        text-align: justify;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        line-height: 25px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        border-top-style: dashed;
+        border-left-style: dotted;
+        border-right-style: groove;
+        border-bottom-style: double;
+        border-radius: 5px;
+      }
+      button {
+        background-color: aquamarine;
+        padding: 30px;
+        font-size: larger;
+        border-radius: 20px;
+        /* order: none; */
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(128, 123, 159);
+      }
+      ul {
+        list-style-position: inside;
+        list-style-type: circle;
+      }
+      ol {
+        list-style-position: outside;
+        list-style-type: disc;
+      }
+      a:link {
+        color: green;
+      }
+      a:visited {
+        color: orange;
+      }
+      a:hover {
+        color: pink;
+      }
+      a:active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>form</legend>
+        <input type="file" name="file" autofocus />
+        <input type="date" name="sdate" max="2023-01-01" min="2000-01-01" />
+      </fieldset>
+    </form>
+    <div>
+      <h1>header</h1>
+      <p>
+        The div element has no special meaning at all. It represents its
+        children. It can be used with the class, lang, and title attributes to
+        mark up semantics common to a group of consecutive elements. The div
+        element has no special meaning at all. It represents its children. It
+        can be used with the class, lang, and title attributes to mark up
+        semantics common to a group of consecutive elements. The div element has
+        no special meaning at all. It represents its children. It can be used
+        with the class, lang, and title attributes to mark up semantics common
+        to a group of consecutive elements. mark up semantics common to a group
+        of consecutive elements. mark up semantics common to a group of
+        consecutive elements. The div element has no special meaning at all. It
+        represents its children. It can be used with the class, lang, and title
+        attributes to mark up semantics common to a group of consecutive
+        elements. The div element has no special meaning at all. It represents
+        its children. It can be used with the class, lang, and title attributes
+        to mark up semantics common to a group of consecutive elements. The div
+        element has no special meaning at all. It represents its children. It
+        can be used with the class, lang, and title attributes to mark up
+        semantics common to a group of consecutive elements. mark up semantics
+        common to a group of consecutive elements. mark up semantics common to a
+        group of consecutive elements.
+      </p>
+    </div>
+    <div>
+      <button>click</button>
+    </div>
+    <div>
+      <ul>
+        <li>12345</li>
+        <li>12345</li>
+        <li>12345</li>
+      </ul>
+      <ol>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+      </ol>
+    </div>
+    <div>
+      <a
+        href="https://www.quora.com/Whats-the-difference-between-the-embed-and-iframe-elements-in-HTML"
+        target="-blank"
+        >click this</a
+      >
+    </div>
+  </body>
 </html>
