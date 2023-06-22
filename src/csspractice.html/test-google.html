@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgba(32, 33, 36, 1);
+            display: flex;
+            flex-direction: column;
+            margin-top: 20%;
+            align-items: center;
+        }
+        
+        .search-bar-full{
+            height: 50px;
+            display: flex;
+            width:40%;
+            background-color: rgb(159, 159, 159);
+            border-radius: 25px;
+        }
+        .google-logo{
+            height: 20px;
+            width: 20px;
+        }
+        input{
+            background-color: rgb(159, 159, 159);
+            border: none;
+        }
+        .search-bar{
+            padding:15px;
+        }
+        .voice-search{
+            padding: 15px;
+            position: absolute;
+            right: 30%;
+
+        }
+        .images-search{
+            padding: 15px;
+            position: absolute;
+            right: 35%;
+        }
+        .images-search,.voice-search,.search-bar{
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+    <body>
+        <div class="google-logo"><img
+            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png"
+            alt="GoogleLogo"
+            width="300"
+            height="100"
+          /></div>
+    <div class="search-bar-full">
+        <img class="search-bar" src="/Internship/src/images/search-icon-white-one-md.png" alt="">
+        <input type="search">
+        <img class="voice-search" src="/Internship/src/images/googleVoiceSearch.png" alt="">
+        <img class="images-search" src="/Internship/src/svgs/Google_Lens_Icon.svg" alt="">
+    </div>
+    </body>
+</html>
