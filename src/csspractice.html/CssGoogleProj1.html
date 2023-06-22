@@ -75,22 +75,6 @@
         border: 2px solid rgb(34, 33, 33);
         padding-left: 50px;
       }
-      .voice-search {
-        position: absolute;
-        right: 500px;
-        top: 340px;
-      }
-      .cam-search {
-        position: absolute;
-        right: 20%;
-        top: 56%;
-      }
-      .g-search {
-        position: absolute;
-        left: 430px;
-        top: 342px;
-        z-index: 1;
-      }
       footer {
         color: white;
         width: 100%;
@@ -111,11 +95,6 @@
         box-shadow: 2px 2px 5px lightgray, -2px -2px 5px lightgray;
         border-radius: 25px;
       }
-      .search {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
       .span-lang {
         font-size: 14px;
         margin-right: 10px;
@@ -126,6 +105,36 @@
         text-decoration: none;
         color: rgb(227, 227, 227);
       }
+             
+      .search-bar-full{
+            height: 50px;
+            display: flex;
+            width:40%;
+            background-color: rgb(159, 159, 159);
+            border-radius: 25px;
+        }
+        input{
+            background-color: rgb(159, 159, 159);
+            border: none;
+        }
+        .search-bar{
+            padding:15px;
+        }
+        .voice-search{
+            padding: 15px;
+            position: absolute;
+            right: 30%;
+
+        }
+        .images-search{
+            padding: 15px;
+            position: absolute;
+            right: 35%;
+        }
+        .images-search,.voice-search,.search-bar{
+            height: 20px;
+            width: 20px;
+        }
     </style>
     <title>Google</title>
   </head>
@@ -173,21 +182,22 @@
       <br />
       <br />
       <br />
-      <div class="search">
+      <div class="search-bar-full">
         <img
-          class="g-search"
-          style="height: 25px; width: 25px"
+          class="search-bar"
           src="/Internship/src/images/search-icon-white-one-md.png"
           alt=""
-        /><input type="search" /><img
+        />
+        <input type="search" />
+        <img
           class="voice-search"
-          style="height: 30px; width: 20px"
           src="/Internship/src/images/googleVoiceSearch.png"
-        /><img
-          class="cam-search"
-          style="height: 30px; width: 30px"
+          alt=""
+        />
+        <img
+          class="images-search"
           src="/Internship/src/svgs/Google_Lens_Icon.svg"
-          alt="cam"
+          alt=""
         />
       </div>
       <div class="BelowSearch">
