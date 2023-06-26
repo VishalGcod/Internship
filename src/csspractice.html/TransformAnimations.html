@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        head{
+            border: 0px auto;
+        }
+        .bgImg{
+            width: 100%;
+            height: 700px;
+        }
+        .cloud{
+            position: absolute;
+            top: 10%;
+            animation: fly 5s ease-in-out infinite;
+            transform: translatex(10%);
+
+        }
+        @keyframes fly{
+            0%{
+                transform:translate(10%,0%)
+            }
+            100%{
+                transform:translate(200%,0%)
+            }
+        }
+        .bike{
+            position: absolute;
+            top: 70%;
+            transform: translateX(220%);
+            animation: bike 5s ease-in-out infinite;
+        }
+        @keyframes bike{
+            0%{
+                transform:translate(220%,0%)
+            }
+            100%{
+                transform:translate(10%,0%)
+            }
+        }
+        .cloud1{
+            position: absolute;
+            top: 25%;
+            right: 30%;
+            animation: fly2 5s ease-in-out infinite;
+            transform: translatex(10%);
+        }
+        @keyframes fly2{
+            0%{
+                transform:translate(15%,0%)
+            }
+            100%{
+                transform:translate(100%,0%)
+            }
+            
+        }
+        .bike2{
+            position: absolute;
+            top: 70%;
+            transform: translateX(220%);
+            animation: drive2 5s ease-in-out infinite;
+        }
+        @keyframes drive2{
+            0%{
+                transform:translate(15%,0%)
+            }
+            100%{
+                transform:translate(200%,0%)
+            }
+            
+        }
+        .sun{
+            position: absolute;
+            top: 20%;
+            transform: translateX(60px);
+            transform: rotatez(90deg);
+            transform: scaley(1);
+            /* transform: skewX(); */
+        }
+        .division{
+            position: absolute;
+            top: 50%;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(255, 0, 0);
+            transition:background-color 1500ms ease-in;
+            transition:border-radius 1500ms ease-in;
+        }
+        .division:hover{
+            background-color: greenyellow;
+            border-radius: 50%;
+        }
+        .bike2:hover{
+            animation-play-state: paused;
+        }
+        .bike:hover{
+            animation-play-state: paused; 
+        }
+        .cloud:hover{
+            animation-play-state: paused; 
+        }
+        .cloud1:hover{
+            animation-play-state: paused; 
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img class="bgImg" src="/Internship/src/images/2droad .webp" alt="background">
+    </div>
+    <div>
+        <img class="cloud" src="/Internship/src/images/pngcloud.png" alt="cloud">
+    </div>
+    <div>
+        <img class="cloud1" src="/Internship/src/images/pngcloud.png" alt="cloud">
+    </div>
+    <div class="bike">
+        <img style="height: 200px; width: 300px;"  src="/Internship/src/images/duke.png" alt="bike">
+    </div>
+    <div class="bike2">
+        <img style="height: 200px; width: 300px;" src="/Internship/src/images/bikepng.png" alt="bike2">
+    </div>
+    <div class="sun">
+        <img style="height: 175px; width: 175px;" src="/Internship/src/images/sun.png" alt="image">
+    </div>
+    <div class="division">
+        div
+    </div>
+</body>
+</html>
