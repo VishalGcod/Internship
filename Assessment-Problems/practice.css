@@ -53,7 +53,7 @@ h1 {
 .nav-txt {
   color: black;
   font-weight: 800;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   margin-right: 35px;
 }
@@ -77,7 +77,7 @@ h1 {
 }
 .d-page {
   color: black;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   cursor: pointer;
   margin-right: 35px;
@@ -105,12 +105,12 @@ h1 {
 }
 #header1 {
   font-family: "Poppins", sans-serif;
-  /* margin-top: -30px; */
+  /* margin-top: -20px; */
   word-spacing: 3px;
   letter-spacing: 8.8px;
   max-width: 900px;
   /* font-weight: 1000; */
-  font-size: 34px;
+  font-size: 45px;
 }
 .para2 {
   width: 100%;
@@ -123,7 +123,7 @@ h1 {
 .blocks {
   display: flex;
   /* flex-wrap: wrap; */
-  height: 600px;
+  height: 750px;
   width: 100%;
   justify-content: center;
   /* margin-bottom: 0px; */
