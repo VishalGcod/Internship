@@ -5,6 +5,9 @@ body {
 h1 {
   text-align: center;
 }
+section{
+  position: relative;
+}
 .nav {
   background-color: white;
   width: 100%;
@@ -14,7 +17,7 @@ h1 {
   align-items: center;
   box-sizing: border-box;
   position: fixed;
-  /* z-index: 16; */
+  z-index: 100;
 }
 .store {
   position: relative;
@@ -53,7 +56,7 @@ h1 {
 .nav-txt {
   color: black;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
   margin-right: 35px;
 }
@@ -473,7 +476,7 @@ h5 {
   .nav {
     background-color: white;
     width: 100%;
-    height: 60px;
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -482,8 +485,8 @@ h5 {
     z-index: 1;
   }
   #logo {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
   .nav-txt {
     color: black;
@@ -494,30 +497,31 @@ h5 {
     display: none;
   }
   .buyBtn {
-    font-size: 10px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
     color: white;
     background-color: rgb(170, 210, 54);
-    padding: 7px 25px;
+    padding: 9px 20px;
     text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
+    border: 0;
+    width: 120px;
+    border-radius: 4px;
     margin-right: 17px;
     cursor: pointer;
   }
   .bg {
     position: relative;
-    background-image: url(/Internship/Assessment-Problems/landing-background.png);
+    background-image: url(/Assessment-Problems/landing-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    /* width: 125%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: auto;
     font-weight: 500;
     line-height: 1.2;
-    font-size: 18px;
+    font-size: 28px;
     font-family: sans-serif;
     align-items: center;
     justify-content: center;
@@ -532,11 +536,36 @@ h5 {
     color: #8b8b99;
   }
   .blocks {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    position: relative;
+    top: 0%;
+    grid-template-rows: 100%;
+    /* flex-direction: column; */
     /* flex-wrap: wrap; */
     /* height: 400px; */
     width: 100%;
     /* justify-content: center; */
   }
+  .dropdown{
+    display: none;
+  }
+  #header1 {
+    font-family: "Poppins", sans-serif;
+    /* margin-top: -20px; */
+    word-spacing: 3px;
+    letter-spacing: 8.8px;
+    max-width: 900px;
+    font-weight: 800;
+    font-size: 28px;
+}
+.para2 {
+  width: 100%;
+  max-width: 280px;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #8b8b99;
+  text-align: center;
+}
 }
