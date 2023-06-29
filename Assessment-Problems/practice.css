@@ -147,7 +147,9 @@ section{
 }
 #img-png4 {
   height: 110px;
-  /* width: 170px; */
+  width: 120px;
+  padding-left: 30px;
+  padding-bottom: 40px;
   /* background-color: white; */
 }
 #img-png1:hover {
@@ -175,10 +177,10 @@ section{
   text-align: center;
   padding: 21px;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   justify-content: center;
-  gap: 7%;
+  /* gap: 7%; */
   color: white;
 }
 .b1 {
@@ -346,7 +348,7 @@ h5 {
   font-weight: 600;
   margin: 0 0 8px;
   max-width: 30px;
-  margin-left: -320px;
+  margin-right:110%; 
   margin-top: 50px;
 }
 .data {
