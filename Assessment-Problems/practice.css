@@ -108,13 +108,15 @@ section {
   font-weight: 600;
 }
 #header1 {
-  font-family: "Poppins", sans-serif;
-  /* margin-top: -20px; */
-  word-spacing: 3px;
+  padding-bottom: 4%;
+  width: 100%;
+  max-width: 1100px;
+  font-size: 44px;
+  font-weight: 600;
   letter-spacing: 8.8px;
-  max-width: 800px;
-  /* font-weight: 1000; */
-  font-size: 45px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
 }
 .para2 {
   width: 100%;
@@ -299,7 +301,7 @@ h5 {
   border-radius: 50%;
 }
 .ppl1 {
-  width: 25%;
+  width: 20%;
   text-align: center;
   background-color: #f5f6fb;
   padding: 40px 30px;
@@ -334,6 +336,11 @@ h5 {
   gap: 20px;
   padding: 60px;
 }
+.imp-sub {
+  margin-left: -50px;
+  height: 35px;
+  /* width: 100%; */
+}
 .sub-btn {
   background-color: #f69dad;
   border-radius: 4px;
@@ -345,6 +352,7 @@ h5 {
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 16px;
+  margin-right: 25%;
 }
 .sub-btn:hover {
   background-color: transparent;
@@ -357,13 +365,13 @@ h5 {
   font-weight: 600;
   margin: 0 0 8px;
   max-width: 30px;
-  margin-right: 110%;
-  margin-top: 50px;
+  margin-right: 70%;
+  margin-top: 14px;
 }
 .data {
   display: block;
-  max-width: 120px;
-  margin-left: -70%;
+  max-width: 230px;
+  /* margin-left: -0%; */
   color: #8b8b99;
   line-height: 1.6;
   font-size: 20px;
