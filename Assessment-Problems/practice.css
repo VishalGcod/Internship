@@ -187,7 +187,7 @@ section{
   background-color: 5acda6;
 }
 .para-width {
-  min-width: 100px;
+  min-width: 70px;
 }
 .block4 {
   /* margin-top: 3%; */
@@ -207,6 +207,11 @@ section{
   /* padding: 1%; */
   color: white;
 }
+/* .circle-block{
+    padding-left: 20px;
+    padding-right: 20px;
+} */
+
 .circle {
   display: inline-block;
   background-color: #e3b375;
