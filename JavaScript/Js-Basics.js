@@ -61,12 +61,34 @@
 // console.log(str1+" "+str2);
 
 // trim
-var str1 = "    ,java script,    ";
-console.log(str1.trim());
+// var str1 = "    ,java script,    ";
+// console.log(str1.trim());
 
 // charat
-console.log(str1.charAt(6));
+// console.log(str1.charAt(6));
 
 // split
-console.log(str1.split(" "));
-console.log(str1.split(","));
+// console.log(str1.split(" "));
+// console.log(str1.split(","));
+
+console.clear()
+
+var string= 'this is called javascript'
+console.log(string.substring(0,7));
+console.log(string.slice(0,7))
+
+var myvar
+console.log(myvar);
+myvar= null
+console.log(myvar);
+
+var ch=10
+if(ch>12){
+    console.log(true);
+}
+ifelse(ch>20){
+    console.log(true);
+}
+else{
+    console.log(false);
+}
