@@ -240,10 +240,10 @@ console.clear();
 // }
 // console.log(count);
 
-// var student =  {  
-//     name : "David Rayy",  
-//     sclass : "VI",  
-//     rollno : 12   
+// var student =  {
+//     name : "David Rayy",
+//     sclass : "VI",
+//     rollno : 12
 // }
 // delete(student.rollno)
 // console.log(student);
@@ -252,38 +252,46 @@ console.clear();
 //     console.log(i);
 // }
 
-const library = [ 
-    { 
-    author: 'Bill Gates', 
-    title: 'The Road Ahead', 
-    readingStatus: true 
-    }, 
-    { 
-    author: 'Steve Jobs', 
-    title: 'Walter Isaacson', 
-    readingStatus: true 
-    }, 
-    { 
-    author: 'Suzanne Collins', 
-    title: 'Mockingjay: The Final Book of The Hunger Games', 
-    readingStatus: false 
-    }];
+// const library = [
+//   {
+//     author: "Bill Gates",
+//     title: "The Road Ahead",
+//     readingStatus: true,
+//   },
+//   {
+//     author: "Steve Jobs",
+//     title: "Walter Isaacson",
+//     readingStatus: true,
+//   },
+//   {
+//     author: "Suzanne Collins",
+//     title: "Mockingjay: The Final Book of The Hunger Games",
+//     readingStatus: false,
+//   },
+// ];
 
-    for(var i in library){
-        var obj=library[i]
-        if((obj.readingStatus)==true)
-        console.log('You still read '+obj.author+' by '+obj.title);
-        
+// for (var i in library) {
+//   var obj = library[i];
+//   if (obj.readingStatus == true)
+//     console.log("You still read " + obj.author + " by " + obj.title);
+// }
+var customers_data = {
+  Ben10: [22, 30, 11, 17, 15, 52, 27, 12],
+  Sameer: [5, 17, 30, 33, 40, 22, 26, 10, 11, 45],
+  Zeeshan: [22, 30, 11, 5, 17, 30, 6, 57],
+};
+var count = 0;
+for (var i in customers_data) {
+  var obj2 = customers_data[i];
+  console.log(obj2);
+  for (var j in obj2) {
+    if (obj2[j] > 20) {
+      console.log(obj2[j]);
+      count++;
+      if (count == 5) {
+        console.log(i + "winner");
+      }
     }
-    var customers_data={ 
-        'Ben10': [22, 30, 11, 17, 15, 52, 27, 12], 
-        'Sameer': [5, 17, 30, 33, 40, 22, 26, 10, 11, 45], 
-        'Zeeshan': [22, 30, 11, 5, 17, 30, 6, 57]  
-       }
-       for( var i in customers_data){
-        var obj=customers_data[i]
-        var num=obj[i]
-        
-        // console.log(num);
-
-       }
+  }
+  // console.log(num);
+}
