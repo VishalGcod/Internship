@@ -563,6 +563,9 @@ iframe {
     /* width: 100%; */
     /* justify-content: center; */
   }
+  .circle-block{
+    width: 100%;
+  }
   .b1,
   .b2,
   .b3,
