@@ -294,21 +294,245 @@ console.clear();
 //     }
 //   }
 //   // console.log(num);
+// 
+// var customers_data = {
+//   Ben10: [22, 30, 11, 17, 15, 52, 27, 12],
+//   Sameer: [5, 17, 30, 33, 40, 22, 26, 10, 11, 45],
+//   Zeeshan: [22, 30, 11, 5, 17, 30, 6, 57],
+// };
+// var count=0
+// for(var i in customers_data){
+//   var obj=customers_data[i]
+//   for(var j in obj){
+//     if(obj[i]>20){
+//       count++
+//     }
+//   }
+//   if(count==5){
+//     console.log('winner is'+i);
+//   }
 // }
-var customers_data = {
-  Ben10: [22, 30, 11, 17, 15, 52, 27, 12],
-  Sameer: [5, 17, 30, 33, 40, 22, 26, 10, 11, 45],
-  Zeeshan: [22, 30, 11, 5, 17, 30, 6, 57],
-};
-var count=0
-for(var i in customers_data){
-  var obj=customers_data[i]
-  for(var j in obj){
-    if(obj[i]>20){
-      count++
-    }
-  }
-  if(count==5){
-    console.log('winner is'+i);
-  }
-}
+
+// var customers_data = {
+//   Ben10: [22, 30, 11, 17, 15, 52, 27, 12],
+//   Sameer: [5, 17, 30, 33, 40, 22, 26, 10, 11, 45],
+//   Zeeshan: [22, 30, 11, 5, 17, 30, 6, 57],
+// };
+
+// var { ben, ...rest } = customers_data;
+// console.log(rest);
+
+// var no1 = (name) => console.log(name);
+// no1("gv");
+
+// // note
+// // person?.name?.firstname
+
+// var arr = [1, 2, 3, 4, 5];
+// var arr2 = [6, 7, 8, 9];
+// var arr3 = arr.concat(arr2);
+// console.log(toString(arr3));
+
+// var a = "hello";
+// console.log(arr3.splice(1, 5, 10, 11));
+// console.log(arr3);
+// var arr4 = [1, 5, 7, 8, 3, 5, 4];
+// console.log(arr4.sort());
+// // console.log('reverse ${a}');
+
+// console.log(arr4.reverse());
+// console.log(arr3.splice(2, 1));
+
+// console.log(arr3.splice(0, 1));
+
+// for (var i in arr) {
+//   if (i % 2 != 0) continue;
+//   console.log(" odd numbers are " + arr[i]);
+// }
+
+// // arr-prob-1
+// arr = [1, "a", 2, "b", 3, "c", 6, "d", 7, "e", 8, "f"];
+// console.log(arr.reverse());
+
+// var ar1 = [4, 11, 12, 23, 46, 65, 70, 73, 98];
+// var ar2 = [7, 13, 25, 46, 58, 70, 84];
+
+// var count = 0;
+// for (let i = 0; i < ar1.length; i++) {
+//   for (let j = 0; j < ar2.length; j++) {
+//     if (ar1[i] == ar2[j]) {
+//       count++;
+//     }
+//     if (count >= 1) console.log("element found: yes");
+//   }
+// }
+
+// var no1 = [34,23,45,55,67,77];
+//   for (var j = 0; j < no1.length-1; j++) {
+//     if (no1[j] < no1[j+1]) {
+//       console.log("true strictly increasing");
+      
+//     }
+//     else if(no1[j] > no1[j+1]){
+//       console.log("TRUE  strictly decreasing");
+//       break
+//     }else{
+//         console.log("False");
+//     }
+//   }
+
+//   var no=[22,8, 301, 404, 35, 99]
+//   for (let i = 0; i < no.length; i++) {
+//     const element = no[i]%10;
+//     if(element==2){
+//         no[i]+='nd'
+//     }
+//     else if(element==8){
+//         no[i]+='th'
+//     }
+//     else if(element==1){
+//         no[i]+='st'
+//     }
+//     else if(element==4){
+//         no[i]+='th'
+//     }
+//     else if(element==5){
+//         no[i]+='th'
+//     }
+//     else if(element==9){
+//         no[i]+='th'
+//     }
+//     console.log(no);
+//   }
+// var sum
+// var four=46
+//  var r=[25, 10, 5, 2, 1]
+//  for(var i in r){
+//     sum+=r[i]
+//     if(four==sum){
+//         console.log(r[i]);
+//     }
+//     else{
+//         if(four!=sum){
+//             sum+=r[i]
+//         }
+//     }
+// }
+
+// var str="javascript is cool" 
+// var str1=str.split('')
+// for(var i in str1){
+//     if(str1[i]=='a'){
+//         str1[i]=4;
+//     }
+//     else if(str1[i]=='e'){
+//         str1[i]=3;
+//     }
+//     else if(str1[i]=='i'){
+//         str1[i]=1;
+//     }
+//     else if(str1[i]=='o'){
+//         str1[i]=0;
+//     }
+//     else if(str1[i]=='s'){
+//         str1[i]=5;
+//     }
+// }
+// console.log(str1.join(''));
+
+// var ch='Good, better, best. Never let it rest. "Til your good is better and your better is" best.'
+// var count=0
+// var ch1=ch.split('')
+// for(i in ch){
+    
+//     if(ch1[i]=='a'||ch1[i]=='e'||ch1[i]=='i'||ch1[i]=='o'||ch1[i]=='u'){
+//         count++
+//     }
+// }
+// console.log(count);
+
+// var name=prompt('enter val')
+// var caser='The Quick Brown Fox'
+// var caser1=caser.split('')
+// for(var i in caser1){
+//     if(/[A-Z]/.test(caser1[i])){
+//         caser1[i]=caser1[i].toLowerCase()
+//     }
+
+//     else if(/[a-z]/.test(caser1[i])){
+//         caser1[i]=caser1[i].toUpperCase()
+//     }
+// }
+// console.log(caser1.join(''));
+
+// for(var i=0; i<=10; i++){
+//     if(i%2==0){
+//         console.log(i+'is even');
+//     }
+//     else{
+//         console.log(i+'is odd');
+//     }
+// }
+
+// var v="There is exactly one space between each word and no punctuation is used."
+// console.log(v);
+// var v1=v.split(' ')
+// // console.log(v1)
+// for(var i in v1){
+//   if((v1[i].length)%2!=0){
+//     // console.log(v1[i])
+//       var v2=v1[i].split('')
+//       // console.log(v2)
+//       v2=v2.reverse()
+//       // console.log(v2)
+//       v1[i]=v2.join()
+//   }
+// }
+//   console.log(v1.join(''));
+
+// var no1=1
+// var no2=15
+// while(no1<=no2){
+//   if(no1%3==0){
+//     console.log(no1+' fizz')
+//   }
+//   else if(no1%5==0){
+//     console.log(no1+' buzz')
+//   }else if(no1%5==0&&no1%3==0){
+//     console.log(no1+' fizzbuzz')
+//   }else{
+//     console.log(no1)
+//   }
+//   no1++
+// }
+
+// var no1=1
+// var sum=0
+// while(no1<1000){
+//   if(no1%3==0||no1%5==0){ 
+//     sum+=no1
+//   }
+//   no1++
+// }
+// console.log(sum)
+
+// var n1=15
+// var n2=25
+// for(var i=0;i<=n1&&i<=n2;i++){
+//   if(n1%i==0&&n2%i==0){
+//      console.log(i)
+//   }
+// }
+// var n1=5
+// var n2=18
+// var hcf
+// for(var i=0;i<=n1&&i<=n2;i++){
+//   if(n1%i==0&&n2%i==0){
+//      hcf=i
+//   }
+// }
+//   console.log(hcf)
+//   var lcm
+//   lcm=(n1*n2)/hcf
+//     console.log(lcm)
+
