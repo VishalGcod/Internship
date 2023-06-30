@@ -275,23 +275,40 @@ console.clear();
 //   if (obj.readingStatus == true)
 //     console.log("You still read " + obj.author + " by " + obj.title);
 // }
+// var customers_data = {
+//   Ben10: [22, 30, 11, 17, 15, 52, 27, 12],
+//   Sameer: [5, 17, 30, 33, 40, 22, 26, 10, 11, 45],
+//   Zeeshan: [22, 30, 11, 5, 17, 30, 6, 57],
+// };
+// var count = 0;
+// for (var i in customers_data) {
+//   var obj2 = customers_data[i];
+//   console.log(obj2);
+//   for (var j in obj2) {
+//     if (obj2[j] > 20) {
+//       console.log(obj2[j]);
+//       count++;
+//       if (count == 5) {
+//         console.log(i + "winner");
+//       }
+//     }
+//   }
+//   // console.log(num);
+// }
 var customers_data = {
   Ben10: [22, 30, 11, 17, 15, 52, 27, 12],
   Sameer: [5, 17, 30, 33, 40, 22, 26, 10, 11, 45],
   Zeeshan: [22, 30, 11, 5, 17, 30, 6, 57],
 };
-var count = 0;
-for (var i in customers_data) {
-  var obj2 = customers_data[i];
-  console.log(obj2);
-  for (var j in obj2) {
-    if (obj2[j] > 20) {
-      console.log(obj2[j]);
-      count++;
-      if (count == 5) {
-        console.log(i + "winner");
-      }
+var count=0
+for(var i in customers_data){
+  var obj=customers_data[i]
+  for(var j in obj){
+    if(obj[i]>20){
+      count++
     }
   }
-  // console.log(num);
+  if(count==5){
+    console.log('winner is'+i);
+  }
 }
