@@ -87,10 +87,11 @@ section {
   margin-right: 35px;
 }
 .bg {
-  background-image: url(/Internship/Assessment-Problems/landing-background.png);
+  background-image: url(/Assessment-Problems/landing-background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: bottom; */
+  background-position: bottom;
+  padding-top: 120px;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -109,16 +110,16 @@ section {
 }
 #header1 {
   font-family: "Poppins", sans-serif;
-  /* margin-top: -20px; */
-  word-spacing: 3px;
+  margin-top: -242px;
+  word-spacing: 0px;
   letter-spacing: 8.8px;
   max-width: 900px;
   /* font-weight: 1000; */
-  font-size: 45px;
+  font-size: 44px;
 }
 .para2 {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   font-size: 14px;
   letter-spacing: 0.5px;
   font-weight: 400;

@@ -536,3 +536,49 @@ console.clear();
 //   lcm=(n1*n2)/hcf
 //     console.log(lcm)
 
+// var count=0
+// var b=[1,2,3,4,5,6,7,8,9]
+// for(i in b){
+//     if(b[i]%2==0){
+//         count++
+//     }
+// }
+// console.log(count-1);
+
+// var count=0
+// var b=[1,2,3,4,5,6,7,8,9]
+// console.log(typeof(b));
+
+// var c=[10]
+
+// b.push.apply(b,c)
+
+
+// var student = {
+//     name : "David Rayy",
+//     sclass : "VI",
+//     rollno : 12 };
+    
+//     for(i in student){
+//         console.log(i)
+//     }
+//     console.log(Object.keys(student))
+//     console.log(Object.values(student))
+//     console.log(Object.entries(student))
+    
+//     var {name,...rest}=student
+//     console.log(name)
+//     console.log(rest)
+
+// 10. Write a JavaScript program that prints the elements of the following array.
+// Note : Use nested for loops.
+// Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+// Sample Output :
+// "row 0"
+// " 1"
+// " 2"
+// " 1"
+// " 24"
+// "row 1"
+
+
