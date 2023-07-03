@@ -88,11 +88,11 @@ section {
   margin-right: 35px;
 }
 .bg {
-  background-image: url(/Assessment-Problems/landing-background.png);
+  background-image: url(/Internship/Assessment-Problems/landing-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding-top: 116px;
+  padding-top: 73px;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -111,13 +111,12 @@ section {
 }
 #header1 {
   font-family: "Poppins", sans-serif;
-  margin-top: -222px;
+  margin-top: -139px;
   word-spacing: 0px;
   letter-spacing: 8.8px;
   max-width: 900px;
   /* font-weight: 1000; */
   font-size: 44px;
-
 }
 .para2 {
   width: 100%;
@@ -160,7 +159,7 @@ section {
   margin-top: -60px;
   height: 110px;
   width: 120px;
-  padding-left: 80px;
+  padding-left: 100px;
   padding-bottom: 40px;
   margin-bottom: -35px;
   /* background-color: white; */
@@ -508,7 +507,7 @@ iframe {
 @media (max-width: 800px) {
   .nav {
     background-color: white;
-    width: 100%;
+    width: 100vw;
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -579,7 +578,7 @@ iframe {
     /* width: 100%; */
     /* justify-content: center; */
   }
-  .circle-block{
+  .circle-block {
     width: 100%;
   }
   .b1,
