@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #div1 {
+        background-color: steelblue;
+        /* display: grid;
+            place-items: center; */
+        height: 100vh;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">
+      <input type="text" id="txt" />
+      <p id="disp"></p>
+      <button id="btn" 
+      //onclick="audio.play()"
+      >Print</button>
+    </div>
+    <script>
+      var txt = document.getElementById("txt");
+      var para = document.getElementById("disp");
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        para.innerHTML = txt.value;
+      });
+
+    //   btn.addEventListener("onkeypress", function () {
+        const audio = new Audio();
+        audio.src ="mixkit-fast-double-click-on-mouse-275.wav";
+    //   });
+    count=0
+    btn.addEventListener('mouseover',function(){
+    count+=1
+    console.log(count)
+
+    })
+
+        addEventListener('keypress',function(e){
+            var kp=e.keyCode
+            if(kp===13){
+                const aud=new Audio()
+                aud.src="mixkit-fast-double-click-on-mouse-275.wav"
+                aud.play()
+            }
+        })
+    </script>
+  </body>
+</html>
