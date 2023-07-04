@@ -1,0 +1,23 @@
+#clicker {
+  height: 20%;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#text {
+  font-size: 10px;
+  background-color: steelblue;
+  color: white;
+}
+
+#inc {
+  padding: 15px;
+  color: white;
+  background-color: lightgreen;
+}
+#dic {
+  padding: 15px;
+  color: white;
+  background-color: lightcoral;
+}

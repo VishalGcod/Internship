@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #div1{
+            display: flex;
+            justify-content: center;
+            background-color: lavender;
+            color: palevioletred;
+            height: 30%;
+            width: 30%;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">enter</button>
+    <div id="div1">
+        <h1 id="header">0</h1>
+    </div>
+    <script>
+        // var btn=document.getElementById('btn')
+
+        // btn.addEventListener('keypress',function(e){
+        //     var kc=e.keyCode
+        //     if(kc==13){
+        //         console.log('pressed enter');
+        //     }
+        // })
+        var count=0
+        var div1=document.getElementById('div1')
+        var header=document.getElementById('header')
+        div1.addEventListener('mouseover',function(){
+            count+=1
+            header.innerHTML=count
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Internship/JavaScript/events.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>This Is Form</legend>
+        <input type="text" placeholder="first val" id="user1" />
+        <br><hr>
+        <input type="text" placeholder="second val" id="user2"/>
+        <br><hr>
+        <input type="submit" value="sub" id="submit"/>
+      </fieldset>
+    </form>
+    <script>
+        var userid1=document.getElementById('user1')
+        var userid2=document.getElementById('user2')
+        var submitbtn=document.getElementById('submit')
+        
+        userid1.addEventListener('change',function(){
+            console.log('changed');
+        })
+
+        userid1.addEventListener('input',function(e){
+            var currentval=e.target.value
+            currentval=currentval.toUpperCase()
+            // console.log(currentval);
+            userid1.value=currentval;
+        })
+        userid1.addEventListener('focus',function(){
+            console.log('focused');
+        })
+        userid2.addEventListener('blur',function(){
+            alert('submit');
+            console.log('blurred');
+        })
+    </script>
+  </body>
+</html>

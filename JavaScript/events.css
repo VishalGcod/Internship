@@ -1,0 +1,21 @@
+body{
+    background-color: lavender;
+}
+form{
+    color: hotpink;
+    line-height: 150px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+input{
+    background-color: lemonchiffon;
+    width: 550px;
+    height: 50px;
+    border-radius: 5px;
+}
+fieldset{
+    background-color: lightblue;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Internship/JavaScript/Js-Btn-Eve.css" />
+    <style>
+      body {
+        background-color: wheat;
+        border: 0;
+      }
+      .small {
+        font-size: 24px;
+      }
+      .big {
+        font-size: 48px;
+      }
+      .center {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .image {
+        height: 55px;
+        width: 55px;
+        cursor: grabbing;
+      }
+      .dd1 {
+        display: block;
+        text-align: center;
+        /* display: flex;
+        flex-direction: column; */
+        /* justify-content: center; */
+        font-size: 30px;
+        line-height: 50px;
+        width: 15%;
+        background-color: orange;
+        height: 20%;
+      }
+      .dd2 {
+        display: none;
+        /* display: flex;
+        flex-direction: column; */
+        /* font-size: 30px;
+        line-height: 50px;
+        width: 15%;
+        background-color: orange;
+        height: 20%; */
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="dropdown">
+      <img
+        class="image"
+        src="/Internship/src/images/dropdown.png"
+        alt="dropdown"
+      />
+      <div id="dd" class="dd2">
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+        <p>four</p>
+      </div>
+    </div>
+    <div class="center">
+      <h1 id="heading" class="small">This is Heading</h1>
+      <button id="btn">Click</button>
+    </div>
+    <hr />
+    <div id="clicker">
+      <button id="inc">INC</button><button id="dic">DEC</button>
+      <span id="text" class="text">CHANGE IS PERMEMANT</span>
+    </div>
+    <hr />
+
+    <script>
+      var head1 = document.getElementById("heading");
+      var btn1 = document.getElementById("btn");
+      // head1.classList.add('big')
+      btn1.addEventListener("click", function () {
+        // console.log(head1.classList.value);
+        if (head1.classList.value == "small") {
+          // head1.classList.remove("small");
+          head1.classList.add("big");
+        } else {
+          head1.classList.remove("big");
+          head1.classList.add("small");
+          //   console.log("changed");
+        }
+      });
+
+      var drop = document.getElementById("dropdown");
+      var data = document.getElementById("dd");
+
+      drop.addEventListener("click", function () {
+        if (data.classList.value == "dd2") {
+          //   console.log("clicked");
+          data.classList.remove("dd2");
+          data.classList.add("dd1");
+        } else {
+          data.classList.remove("dd1");
+          data.classList.add("dd2");
+        }
+      });
+
+      var text = document.getElementById("text");
+      var btn2 = document.getElementById("inc");
+      var btn3 = document.getElementById("dic");
+
+      var initxt = window.getComputedStyle(text).fontSize;
+      var x = initxt.slice(0, initxt.length - 2);
+      text.style.fontSize='20px'
+      btn2.addEventListener("click", function () {
+        x=parseInt(x)+10
+        text.style.fontSize=x+'px'
+        
+      });
+      btn3.addEventListener("click", function () {
+        x=parseInt(x)-10
+        text.style.fontSize=x+'px'
+        
+      });
+    </script>
+  </body>
+</html>
