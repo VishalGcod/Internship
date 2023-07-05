@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="maindv">
+        <br />
+        <!-- <img src="" alt=""> -->
+        <input type="text" placeholder="Enter Here" id="imp" />
+        <br />
+        <div id="buttons">
+          <button id="btn1">insert</button>
+          <button id="btn2">update</button>
+          <button id="btn3">delete</button>
+        </div>
+        <ul id="lst">
+          <li class="img">one <img src="/src/images/dropdown.png" style="height: 15px; width: 15px; margin-left: 100px;" alt=""></li>
+          <script>
+                var imp=document.getElementById('imp')
+                var btnadd=document.getElementById('btn1')
+                var btnup=document.getElementById('btn2')
+                var btndel=document.getElementById('btn3')
+                var lst=document.getElementById('lst')
+
+                btnadd.addEventListener('click',function(){
+                    var imge=document.createElement('img')
+                    imge.src="/src/images/dropdown.png"
+                    var ele=document.createElement('li')
+                    ele.appendChild(document.createTextNode(imp.value))
+                    ele.id='element'
+                    imge.style.height='15px'
+                    imge.style.width='15px'
+                    imge.style.marginLeft='100px'
+
+                    imge.addEventListener('click',function(event){
+                    var val=event.target.closest('li')
+                        val.remove()
+                })
+
+                    ele.appendChild(imge)
+                    lst.appendChild(ele)
+                })
+                btndel.addEventListener('click',function(){
+                    var del=lst.firstElementChild;
+                    lst.removeChild(del)
+                })
+                btnup.addEventListener('click',function(){
+                //    lst.li.innerHTML=imp.value
+                var imge=document.createElement('img')
+                    imge.src="/src/images/dropdown.png"
+                var curr=lst.firstElementChild;
+                var ele=document.createElement('li')
+                    ele.appendChild(document.createTextNode(imp.value))
+                    imge.style.height='15px'
+                    imge.style.width='15px'
+                    imge.style.marginLeft='100px'
+                    ele.appendChild(imge)
+                    // ele.id='element'
+                    lst.replaceChild(ele,curr)
+
+                })
+          </script>
+</body>
+</html>
