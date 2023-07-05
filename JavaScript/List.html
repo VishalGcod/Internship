@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ,
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <title>Document</title>
+    <style>
+      #maindv {
+        background-color: lavender;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        line-height: 60px;
+      }
+
+      input {
+        height: 35px;
+        width: 45vh;
+        border-radius: 5px;
+        background-color: blanchedalmond;
+      }
+      button {
+        height: 35px;
+        width: 100px;
+        background-color: lightcoral;
+        color: white;
+        border: none;
+        box-shadow: 2px 2px 2px grey;
+        border-radius: 7px;
+      }
+      li {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 7px;
+        width: 40vh;
+        background-color: lemonchiffon;
+        list-style: none;
+        border-radius: 5px;
+        border: 2px solid black;
+        text-align: center;
+      }
+      #buttons {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+      }
+      /* .image{
+        background-image: url(/Internship/src/images/earth.png);
+        background-size: 9%;
+        background-repeat: no-repeat;
+        background-position: right;
+      } */
+      .imge {
+        padding-left: 25px;
+        padding-top: 15px;
+        height: 30px;
+        width: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="maindv">
+      <br />
+      <input type="text" placeholder="Enter Here" id="imp" />
+      <br />
+      <div id="buttons">
+        <button id="btn1">insert</button>
+        <button id="btn2">update</button>
+        <button id="btn3">delete</button>
+      </div>
+      <ul id="lst">
+        <li>
+          Item1
+          <img
+            class="imge" id="image"
+            src="/Internship/src/images/earth.png"
+            alt="earth"
+          />
+        </li>
+      </ul>
+      <script>
+        var btnAdd = document.getElementById("btn1");
+        var list = document.getElementById("lst");
+        var imp = document.getElementById("imp");
+        var btnDel = document.getElementById("btn3");
+        var btnUpd = document.getElementById("btn2");
+
+        btnAdd.addEventListener("click", function () {
+          if (imp.value === "") {
+            swal("type something");
+          } else {
+            var fele = list.firstChild;
+            var newli = document.createElement("li");
+            let img = document.createElement("img");
+            img.src = "/Internship/src/images/earth.png";
+            img.classList.add("imge");
+            newli.appendChild(
+              document.createTextNode(imp.value + list.childElementCount)
+            );
+            newli.appendChild(img);
+            newli.id = "ele";
+            list.insertBefore(newli, fele);
+          }
+        });
+        btnDel.addEventListener("click", function () {
+          var fele = list.firstElementChild;
+        //   var str = document.getElementById("ele");
+          console.log(list.innerHTML);
+          if ((list.innerHTML) === '<li id="ele">11<img src="/Internship/src/images/earth.png" class="imge"></li>') {
+            alert("cant delete");}
+        //   } else {
+            //   if(([a-z].test())==ele.value){
+            //     alert('text is present')
+            //   }
+            //   //   if (str.value === 'hi5') {
+            //   // alert("you cant remove this");
+            //   //   } else {
+              else{
+            list.removeChild(fele);
+          }
+          var image=document.getElementById('image')
+        image.addEventListener('click',function (){
+            console.log('this is btn');
+        })
+
+        });
+
+        btnUpd.addEventListener("click", function () {
+          var newli1 = document.createElement("li");
+          let img = document.createElement("img");
+          img.src = "/Internship/src/images/earth.png";
+          img.classList.add("imge");
+          newli1.appendChild(document.createTextNode(imp.value));
+          newli1.appendChild(img);
+          var firele = list.firstElementChild;
+          list.replaceChild(newli1, firele);
+        });
+
+        var li = document.getElementsByTagName("li");
+        li.addEventListener("click", function () {
+          list.removeChild(list.li);
+        });
+
+        // function node(){
+        //     var newli1=document.getElementById('li')
+        //     newli1.appendChild(document.createTextNode(imp.value))
+        //     return  newli1
+        // }
+      </script>
+    </div>
+  </body>
+</html>
