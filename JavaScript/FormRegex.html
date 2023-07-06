@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: lightcyan;
+      }
+      #formDiv {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+      }
+      form {
+        border-radius: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lavender;
+        box-shadow: 3px 3px 3px 3px grey;
+        width: 30%;
+        height: 50vh;
+      }
+      input {
+        padding-left: 5%;
+        box-shadow: 2px 2px 2px gray;
+        border: none;
+        height: 7%;
+        width: 50%;
+        border-radius: 4%;
+        background-color: lightyellow;
+      }
+      button {
+        height: 7%;
+        width: 25%;
+        border-radius: 7px;
+        box-shadow: 2px 2px 2px gray;
+        color: white;
+        background-color: lightblue;
+        border: none;
+      }
+      #Para {
+        display: none;
+      }
+    </style>
+    <title>Form</title>
+  </head>
+  <body>
+    <div id="formDiv">
+      <form action=" " id="frm">
+        <input type="text" placeholder="Username" id="uId" />
+        <p id="Para">wrong</p>
+        <br />
+        <input type="password" placeholder="password" id="pwd" />
+        <hr />
+        <button id="btn">Submit</button>
+      </form>
+    </div>
+    <script>
+      var uid = document.getElementById("uId");
+      var para = document.getElementById("Para");
+      var pass = document.getElementById("pwd");
+      var btn = document.getElementById("btn");
+      var form = document.getElementById("frm");
+      var uidval = false;
+      var passval = false;
+      btn.style.cursor = "pointer";
+
+      uid.addEventListener("input", function () {
+        var reg = /^[\w]{7,9}$/gi;
+        // console.log();
+        var val = reg.test(uid.value);
+        if (val) {
+          uidval = true;
+          para.style.display = "none";
+        } else {
+          para.style.display = "block";
+          
+        }
+      });
+
+      pass.addEventListener("input", function () {
+        var reg = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+        var pas = reg.test(pass.value);
+        if (pas) {
+          passval = true;
+          btn.style.color = "green";
+        } else {
+          btn.style.color = "red";
+        }
+      });
+      btn.addEventListener("click", function (a) {
+        console.log(passval, uidval);
+        if (passval == true && uidval == true) {
+
+        }
+         else {
+          a.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>

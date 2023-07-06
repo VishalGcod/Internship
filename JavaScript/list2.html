@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input{
+            padding-left: 10px;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +22,7 @@
           <button id="btn3">delete</button>
         </div>
         <ul id="lst">
-          <li class="img">one <img src="/src/images/dropdown.png" style="height: 15px; width: 15px; margin-left: 100px;" alt=""></li>
+          <li class="img">one <img src="/Internship/src/images/dropdown.png" style="height: 15px; width: 15px; margin-left: 100px;" alt="dd"></li>
           <script>
                 var imp=document.getElementById('imp')
                 var btnadd=document.getElementById('btn1')
@@ -27,17 +32,32 @@
 
                 btnadd.addEventListener('click',function(){
                     var imge=document.createElement('img')
-                    imge.src="/src/images/dropdown.png"
-                    var ele=document.createElement('li')
-                    ele.appendChild(document.createTextNode(imp.value))
-                    ele.id='element'
+                    imge.src="/Internship/src/images/dropdown.png"
                     imge.style.height='15px'
                     imge.style.width='15px'
                     imge.style.marginLeft='100px'
+                    var ele=document.createElement('li')
+                    ele.appendChild(document.createTextNode(imp.value))
+                    ele.id='element'
+                    
+                    
 
-                    imge.addEventListener('click',function(event){
+                //     imge.addEventListener('click',function(event){
+                //     var val=event.target.closest('li')
+                //         val.remove()
+                // })
+
+                imge.addEventListener('click',function(event){
+                    var imge=document.createElement('img')
+                    imge.src="/Internship/src/images/dropdown.png"
+                    imge.style.height='15px'
+                    imge.style.width='15px'
+                    imge.style.marginLeft='100px'
                     var val=event.target.closest('li')
-                        val.remove()
+                    val.innerHTML=imp.value
+                    ele.appendChild(imge)
+                    // lst.replaceChild()
+                        // val.remove()
                 })
 
                     ele.appendChild(imge)
@@ -50,7 +70,7 @@
                 btnup.addEventListener('click',function(){
                 //    lst.li.innerHTML=imp.value
                 var imge=document.createElement('img')
-                    imge.src="/src/images/dropdown.png"
+                    imge.src="/Internship/src/images/dropdown.png"
                 var curr=lst.firstElementChild;
                 var ele=document.createElement('li')
                     ele.appendChild(document.createTextNode(imp.value))
@@ -61,7 +81,7 @@
                     // ele.id='element'
                     lst.replaceChild(ele,curr)
 
-                })
+            })
           </script>
 </body>
 </html>

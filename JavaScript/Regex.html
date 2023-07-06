@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="para">
+    The head element represents a collection of metadata for the Document.
+      www.Vishal@game.edu
+      The head element represents a collection of metadata for the Document.
+      +91987654321
+      www.ganesan@game.com
+    </p>
+    <script>
+        var string=document.getElementById('para')
+        var str=string.innerHTML
+
+        string.style.color='red'
+
+        var reg= /\+[\d]{11}/gi
+        var reg1=/www\.[\w]+@[\w]+\.(edu|com|in)+/gi
+        var reg2=/[\+91]+[0-9]{10}/gi
+        var reg3=//
+
+        console.log(str.match(reg));
+        // prompt('prompt')
+        console.log(str.match(reg1));
+        // confirm('i am fine')
+        console.log((str.match(reg2)));
+        
+        console.log((str.match(reg3)));
+        
+    </script>
+  </body>
+</html>
