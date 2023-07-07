@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <script>
+       let heros= `[
+    {
+    "name":"tony",
+    "id":7,
+    "rich":true,
+    "suits":["mark1","mark2","mark55"],
+    "friends":[
+        {
+            "name":"captain america",
+            "age":100
+        },
+        {
+            "name":"Spider man",
+            "age":22,
+            "friends2":["harry","tobey","miles"]
+        }
+    ]
+    },
+    {
+        "name":"ezio",
+        "id":17,
+        "rich":true,
+        "suits":["uni1","uni1","uni3"],
+        "friends":[
+            {
+                "name":"connor kenway",
+                "age":70
+            },
+            {
+                "name":"edvard kenway",
+                "age":50,
+                "friends2":["harry","tobey","miles"]
+            }
+        ]
+    }
+]`
+console.log(JSON.parse(heros)[0].name);
+    </script>
+</body>
+</html>

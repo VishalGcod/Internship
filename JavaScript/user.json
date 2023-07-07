@@ -1,0 +1,36 @@
+[
+    {
+    "name":"tony",
+    "id":7,
+    "rich":true,
+    "suits":["mark1","mark2","mark55"],
+    "friends":[
+        {
+            "name":"captain america",
+            "age":100
+        },
+        {
+            "name":"Spider man",
+            "age":22,
+            "friends2":["harry","tobey","miles"]
+        }
+    ]
+    },
+    {
+        "name":"ezio",
+        "id":17,
+        "rich":true,
+        "suits":["uni1","uni1","uni3"],
+        "friends":[
+            {
+                "name":"connor kenway",
+                "age":70
+            },
+            {
+                "name":"edvard kenway",
+                "age":50,
+                "friends2":["harry","tobey","miles"]
+            }
+        ]
+    }
+]
