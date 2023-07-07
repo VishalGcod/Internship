@@ -20,7 +20,7 @@
         align-items: center;
         background-color: lavender;
         box-shadow: 3px 3px 3px 3px grey;
-        width: 30%;
+        width: 35vw;
         height: 50vh;
       }
       input {
@@ -28,13 +28,13 @@
         box-shadow: 2px 2px 2px gray;
         border: none;
         height: 7%;
-        width: 50%;
+        width: 20vw;
         border-radius: 4%;
         background-color: lightyellow;
       }
       button {
         height: 7%;
-        width: 25%;
+        width: 15vw;
         border-radius: 7px;
         box-shadow: 2px 2px 2px gray;
         color: white;
@@ -66,33 +66,45 @@
       var form = document.getElementById("frm");
       var uidval = false;
       var passval = false;
+
+      // function test() {
+      //   console.log("IN");
+      //   return true;
+      // }
+
       btn.style.cursor = "pointer";
 
       uid.addEventListener("input", function () {
-        var reg = /^[\w]{7,9}$/gi;
+        var reg = /^[\w]{7,9}/gi;
         // console.log();
         var val = reg.test(uid.value);
+        console.log(val);
         if (val) {
+          // btn.disabled=false
           uidval = true;
           para.style.display = "none";
         } else {
+          // btn.disabled=true
           para.style.display = "block";
-          
+          uidval=false
         }
       });
 
       pass.addEventListener("input", function () {
-        var reg = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+        var reg = /^[a-z]{6,16}$/gi;
         var pas = reg.test(pass.value);
         if (pas) {
+          // btn.disabled=false
           passval = true;
           btn.style.color = "green";
         } else {
+          // btn.disabled=true
           btn.style.color = "red";
+          passval=false
         }
       });
       btn.addEventListener("click", function (a) {
-        console.log(passval, uidval);
+        // console.log(passval, uidval);
         if (passval == true && uidval == true) {
 
         }
