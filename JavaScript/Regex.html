@@ -9,28 +9,56 @@
     <p id="para">
     The head element represents a collection of metadata for the Document.
       www.Vishal@game.edu
-      The head element represents a collection of metadata for the Document.
-      +91987654321
+      The head element represents a collection of metad17/10/2000ata for the Document.
+      3412345678901112
+      17/10/2000
+      +919876543210
       www.ganesan@game.com
+      5512345678901112
     </p>
     <script>
         var string=document.getElementById('para')
         var str=string.innerHTML
-
         string.style.color='red'
 
-        var reg= /\+[\d]{11}/gi
-        var reg1=/www\.[\w]+@[\w]+\.(edu|com|in)+/gi
+        var reg= /\+[\d]{12}/gi
+        var reg1=/www\.[\w]+@[\w]+\.(edu|com|in)/gi
         var reg2=/[\+91]+[0-9]{10}/gi
-        var reg3=//
+        var reg3=/[A-Z]{1}[a-zA-Z]*/
+        var reg4=/^(?:34|4|37|51|55|36|38)/
+        var reg5=/([^\d]+|^)\d{4,5}[^\d]/
+        // console.log(reg4)
+      // console.log((str.match(reg3)));
 
-        console.log(str.match(reg));
-        // prompt('prompt')
-        console.log(str.match(reg1));
-        // confirm('i am fine')
-        console.log((str.match(reg2)));
+      // var arr=str.split(' ')
+      // for(i in arr){
+      //   if(reg3.test(arr[i])){
+      //     console.log(arr[i])
+      //   }
+      // }
+
+      // var arr=str.split(' ')
+      // for(i in arr){
+      //   if(reg4.test(arr[i])){
+      //     console.log(arr[i])
+      //   }
+      // }
+
+      var arr=str.split(' ')
+      for(i in arr){
+        if(reg5.test(arr[i])){
+          console.log(arr[i])
+        }
+      }
+
+      // console.log(arr);
         
-        console.log((str.match(reg3)));
+
+        // console.log(str.match(reg));
+        // prompt('prompt')
+        // console.log(str.match(reg1));
+        // confirm('i am fine')
+        // console.log((str.match(reg2)));
         
     </script>
   </body>

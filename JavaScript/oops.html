@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var obj1={
+        name:'vishal',
+        age:22,
+        job:'ceo'
+    }
+    function objects(name,age,job) {
+        this.name=name
+        this.age=age
+        this.job=job
+
+        // prototype.calcAge=function(){
+        //     console.log(23-this.age);
+        // }
+    }
+
+    objects.prototype.calcAge=function(){
+            console.log(23-(this.age));
+    }
+
+    objects.prototype.updateName=function(uname){
+        this.name=uname
+    }
+
+    objects.prototype.lastName='constintane'
+
+    var john=new objects('john',23,'ceo')
+    console.log(john.age);
+
+    var wick=new objects('wick',24,'assassin')
+    console.log(wick.job);
+    console.log(john.lastName);
+    console.log(wick);
+    console.log(wick.lastName);
+
+    wick.calcAge()
+
+    john.updateName('castle')
+
+</script>
+</html>
