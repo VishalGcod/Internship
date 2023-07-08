@@ -96,36 +96,13 @@
 
     <script>
         var imp=document.getElementById('impId')
-        var one=document.getElementById('btn-1')
-        var two=document.getElementById('btn-2')
         var add=document.getElementById('btn-add')
         var equ=document.getElementById('btn-equal')
-    
-        one.addEventListener('click',function(e){
-            var val=e.target.innerHTML
-            console.log(val);
-            imp.value=val
-            console.log(imp.innerHTML);
+        var buttn=Array.from(document.getElementsByClassName('gridEle'))
+        buttn.map(btn=>{
+          
         })
-        add.addEventListener('click',function(e){
-            var val=e.target.innerHTML
-            console.log(val);
-            imp.value=val
-            console.log(imp.innerHTML);
-        })
-        two.addEventListener('click',function(e){
-            var val=e.target.innerHTML
-            console.log(val);
-            imp.value=val
-            console.log(imp.innerHTML);
-        })
-        equ.addEventListener('click',function(e){
-            var val=e.target.innerHTML
-            console.log(val);
-            imp.value=val
-            console.log(imp.innerHTML);
-        })
-
+        
     </script>
 
   </body>

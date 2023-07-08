@@ -72,6 +72,7 @@
         var reg = /^[\w]{7,9}$/gi;
         // console.log();
         var val = reg.test(uid.value);
+        console.log(uid.value);
         if (val) {
           uidval = true;
           para.style.display = "none";
@@ -91,13 +92,13 @@
           btn.style.color = "red";
         }
       });
-      btn.addEventListener("click", function (a) {
+      btn.addEventListener("click", function (e) {
         console.log(passval, uidval);
         if (passval == true && uidval == true) {
 
         }
          else {
-          a.preventDefault();
+          e.preventDefault();
         }
       });
     </script>
