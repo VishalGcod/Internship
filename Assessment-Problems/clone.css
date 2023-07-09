@@ -507,7 +507,7 @@ iframe {
 @media (max-width: 800px) {
   .nav {
     background-color: white;
-    width: 100vw;
+    width: 100dvw;
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -543,7 +543,7 @@ iframe {
   }
   .bg {
     position: relative;
-    background-image: url(/Internship/Assessment-Problems/landing-background.png);
+    background-image: url(/Assessment-Problems/landing-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -676,7 +676,7 @@ iframe {
     box-sizing: border-box;
   }
   .block6-form {
-    width: 100%;
+    width: 72dvw;
     height: 400px;
     background-image: url(https://edyoda.s3.ap-south-1.amazonaws.com/public/strawberry-white.png);
     background-size: cover;
@@ -781,7 +781,7 @@ iframe {
     display: flex;
     margin-left: -180px;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
   }
   .bot-btn {
     font-size: 10px;
@@ -795,5 +795,15 @@ iframe {
     border-radius: 4px;
     cursor: pointer;
     margin-right: 217px;
+  }
+  .bot-imp-box {
+    width: 400px;
+    padding: 16px;
+    font-size: 16px;
+    color: #8b8b99;
+    border-radius: 6px;
+    border: 1px solid #e5e6ec;
+    margin-bottom: 16px;
+    box-sizing: border-box;
   }
 }

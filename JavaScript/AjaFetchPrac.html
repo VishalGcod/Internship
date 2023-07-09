@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            border: 2px solid red;
+        }
+    </style>
+    <title>AJAX_FETCH</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>title</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <button id="btn">click</button>
+        <tbody id="data">
+            <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <script>
+
+        var btn=document.getElementById('btn')
+        btn.addEventListener('click',function(){
+            var xhr=new XMLHttpRequest()
+            console.log(xhr.status);
+            xhr.open("GET","https://fakestoreapi.com/products",true)
+                xhr.onload=function(){
+                    let data=JSON.parse(this.response)
+                    data.map(dta=>{
+                        
+                    })
+                xhr.send()
+            }
+        })
+
+        // fetch('https://fakestoreapi.com/products/1',{
+        //     method:'PUT',headers:{
+        //         "content-type":"application/json"
+        //     },body:JSON.stringify({
+        //         "title":"pie"}
+        //     )
+        // }).then(res=>res.json())  .then(data=>console.log(data)).catch(err=>console.log('error'))
+
+        // fetch('https://fakestoreapi.com/products')
+        // .then(res=>{
+        //     if(res.ok){
+        //         console.log('success');
+        //     }else{
+        //         console.log('not success');
+        //     }
+        //     return res
+        // })
+        // .then(res=>res.json())
+        // .then(data=>{
+        //     var cont=''
+        //     data.map(dta=>{
+        //         cont+=`<tr>
+        //         <td>${dta.title}</td>
+        //     <td>${dta.description}</td>
+        //     </tr>`
+        //     })
+        //     document.getElementById('data').innerHTML=cont
+        // })
+        // .catch(err=>console.log('error'))
+
+    </script>
+</body>
+</html>

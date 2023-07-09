@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <button id="showbtn">show</button>
+    <li id="para"></li>
+    <script>
+        var btn=document.getElementById('showbtn')
+        btn.addEventListener('click',function(){
+            var xhr=new XMLHttpRequest()
+            console.log(xhr.status);
+            // console.log(xhr.readyState);
+            xhr.open('GET','https://fakestoreapi.com/products',true)
+            xhr.onload=function(){
+                if(xhr.status==200){
+                    console.log('success');
+                    let count=JSON.parse(this.response)
+                    console.log(count);
+                    count.map(count=>{
+                        var cou=document.createElement('div')
+                        var image=document.createElement('img')
+                        cou.innerHTML+=count.id
+                        document.getElementById('para').appendChild(cou)
+                        image.src+=count.image
+                        cou.appendChild(image)
+                    })
+                }else{
+                    console.log('failed');
+                }
+            }
+            xhr.send()
+        })
+    </script>
+</body>
+</html>
