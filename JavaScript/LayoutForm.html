@@ -5,8 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         #head-div{
+            z-index: 1;
             display: flex;
             background-color: lavenderblush;
+            height: 10dvh;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100dvw;
+        }
+        #l-div{
+            display: flex;
+            height: 10dvh;
+            flex: 1;
+            background-color: aquamarine;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #r-div{
+            display: flex;
+            flex: 2;
+            height: 10dvh;
+            background-color: burlywood;
+            justify-content: space-around;
+            align-items: center;
+        }
+        section{
+            top: 100px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 60vh;
+        }
+        input{
+            height: 20px;
+            width: 200px;
+        }
+        #data{
+            background-color: tomato;
+            height: 10%;
+            width: 50%;
         }
     </style>
     <title>LAYOUT PRACTICE</title>
@@ -14,16 +54,32 @@
 <body>
     <header>
         <div id="head-div">
-            <div>
+            <div id="l-div">
                 <span>head</span>
                 <span>head2</span>
             </div>
-            <div>
+            <div id="r-div">
                 <span>head3</span>
                 <span>head4</span>
                 <span>head5</span>
             </div>
         </div>
     </header>
+    <main>
+        <section>
+            <input type="text">
+            <div>
+                <button>add</button>
+                <button>update</button>
+                <button>delete</button>
+            </div>
+                <div id="data"></div>
+        </section>
+    </main>
+
+<script>
+    
+</script>
+
 </body>
 </html>
