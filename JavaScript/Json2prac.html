@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json2</title>
+    <STyle>
+        li{
+            line-height: 100px;
+        }
+        img{
+            width: 200px;
+        }
+    </STyle>
+</head>
+<body>
+    <ul id="u_list">
+        <li></li>
+    </ul>
+    <script>
+
+        fetch('js.json')
+        .then(req=>req.json())
+        .then(data=>{
+            console.log(data);
+            var list=''
+            data.map((dt)=>{
+                list+=`<ul>
+                    <li><img src="${dt.image}"></li>
+                    <li>${dt.id}</li>
+                    </ul>`
+                console.log(list);
+            })
+            document.getElementById('u_list').innerHTML=list
+
+        }).catch(error=>{
+            console.log('error');
+        })
+        // console.log(req);
+    </script>
+</body>
+</html>

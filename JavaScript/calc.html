@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-
       body {
         border: 0;
         padding: 0;
@@ -41,6 +40,7 @@
         /* border-radius: 7px; */
         font-size: 1.5rem;
         padding-left: 7px;
+        background-color: white;
         width: 16vw;
         height: 9vh;
         outline: none;
@@ -64,10 +64,9 @@
     <title>Calculater</title>
   </head>
   <body>
-
     <div id="calc">
-        <h5>CALCULATOR</h5>
-      <input type="text" id="impId" />
+      <!-- <h5>CALCULATOR</h5> -->
+      <div id="impId"></div>
 
       <div id="divGrid">
         <div class="gridEle" id="btn-mod">%</div>
@@ -91,19 +90,38 @@
         <div class="gridEle" id="btn-dot">.</div>
         <div class="gridEle" id="btn-equal">=</div>
       </div>
-
     </div>
 
     <script>
-        var imp=document.getElementById('impId')
-        var add=document.getElementById('btn-add')
-        var equ=document.getElementById('btn-equal')
-        var buttn=Array.from(document.getElementsByClassName('gridEle'))
-        buttn.map(btn=>{
-          
-        })
-        
+      let display = document.getElementById("impId");
+      var equ = document.getElementById("btn-equal");
+      var buttn = Array.from(document.getElementsByClassName("gridEle"));
+      buttn.map((btn) => {
+        btn.addEventListener("click", () => {
+          // console.log('clicked')
+          console.log(btn.innerText);
+          switch (btn.innerText) {
+            case "C":
+              display.innerText = "";
+              break;
+            case "X":
+              display.innerText = display.innerText.slice(0, -1);
+              break;
+            case "=":
+              try{
+              display.innerText = eval(display.innerText);
+              break
+              }catch{
+                display.innerText='Error'
+                break
+              }
+            default:
+              display.innerText += btn.innerText;
+          }
+          console.log(btn.value);
+          // console.log(display.innerText);
+        });
+      });
     </script>
-
   </body>
 </html>
