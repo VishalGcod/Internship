@@ -44,9 +44,14 @@
             width: 200px;
         }
         #data{
-            background-color: tomato;
+            /* background-color: tomato; */
             height: 10%;
             width: 50%;
+        }
+        li{
+            background-color: aquamarine;
+            padding: 15px;
+            margin: 10px;
         }
     </style>
     <title>LAYOUT PRACTICE</title>
@@ -67,18 +72,51 @@
     </header>
     <main>
         <section>
-            <input type="text">
+            <input type="text" id="input">
             <div>
-                <button>add</button>
-                <button>update</button>
-                <button>delete</button>
+                <button id="ad">add</button>
+                <button id="up">update</button>
+                <button id="del">delete</button>
             </div>
-                <div id="data"></div>
+                <ul id="data">
+                    <li></li>
+                </ul>
         </section>
     </main>
 
 <script>
-    
+    var imp=document.getElementById('input')
+    var btnadd=document.getElementById('ad')
+    var btnup=document.getElementById('up')
+    var btndel=document.getElementById('del')
+    var lst=document.getElementById('data')
+
+    btnadd.addEventListener('click',function(){
+        var val=document.createElement('li')
+        // val.appendChild(document.createTextNode(imp.value))
+        val.innerHTML=imp.value
+        lst.appendChild(val)
+    })
+    btndel.addEventListener('click',function(){
+        // var val=document.createElement('li')
+        var obj=lst.firstChild
+        // val.appendChild(document.createTextNode(imp.value))
+        // val.innerHTML=imp.value
+        lst.removeChild(obj)
+        var lele=document.getElementsByTagName('li')
+        lele.addEventListener('click',function(e){
+        var val=e.target.closest('li')
+        lst.removeChild(val)
+    })
+    })
+    btnup.addEventListener('click',function(){
+        var obj=lst.firstChild
+        var val=document.createElement('li')
+        // val.appendChild(document.createTextNode(imp.value))
+        val.innerHTML=imp.value
+        lst.replaceChild(val,obj)
+    })
+
 </script>
 
 </body>
