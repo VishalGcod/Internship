@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        /* justify-content: center; */
+        /* width: 500px; */
+        gap: 8px;
+        background-color: lavender;
+        border: 2px solid purple;
+        align-items: center;
+      }
+      img {
+        width: 150px;
+        border: 2px solid grey;
+      }
+      .items {
+        height: 100%;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* background-color: lightsteelblue; */
+        text-align: center;
+        border: 1px solid black;
+      }
+    </style>
+    <title>Fetch</title>
+  </head>
+  <body>
+    <section id="content"></section>
+
+    <script>
+      var arr = [];
+      console.log(arr);
+
+      fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((data) => {
+          arr.push(data);
+          console.log(data);
+          var datas = "";
+          data.map((dta) => {
+            datas += `<div class='items'>
+          <div>${dta.title}</div>
+          <div><img src="${dta.image}"></div>
+          <div>${dta.description}</div>
+          <div><button id='${dta.id}pst'>POST</button></div>
+          <div><button id='${dta.id}del'class="deleteBtn" onClick="handleDelete('${dta.id}',event)">DELETE</button></div>
+          </div>`;
+          });
+          document.getElementById("content").innerHTML = datas;
+        })
+        .catch((err) => console.log("error"));
+
+      function handleDelete(id, e) {
+        console.log(id);
+        let database = e.target.closest(".items");
+        fetch("https://fakestoreapi.com/products/" + id, {
+          method: "DELETE",
+          headers: {
+            "content-type": "application/json",
+          },
+        })
+          .then((req) => req.json())
+          .then((data) => console.log(data))
+          .catch((err) => console.log("error"));
+        database.remove();
+        for(i in arr){
+            console.log(arr[i]);
+            if(id==arr[i].id){
+                console.log('hello');
+                arr.remove(arr[i])
+            }
+            console.log(arr);
+        }
+      }
+    </script>
+  </body>
+</html>

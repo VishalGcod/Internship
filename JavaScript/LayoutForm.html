@@ -1,123 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        #head-div{
-            z-index: 1;
-            display: flex;
-            background-color: lavenderblush;
-            height: 10dvh;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100dvw;
-        }
-        #l-div{
-            display: flex;
-            height: 10dvh;
-            flex: 1;
-            background-color: aquamarine;
-            justify-content: space-around;
-            align-items: center;
-        }
-        #r-div{
-            display: flex;
-            flex: 2;
-            height: 10dvh;
-            background-color: burlywood;
-            justify-content: space-around;
-            align-items: center;
-        }
-        section{
-            top: 100px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            height: 60vh;
-        }
-        input{
-            height: 20px;
-            width: 200px;
-        }
-        #data{
-            /* background-color: tomato; */
-            height: 10%;
-            width: 50%;
-        }
-        li{
-            background-color: aquamarine;
-            padding: 15px;
-            margin: 10px;
-        }
+      #head-div {
+        z-index: 1;
+        display: flex;
+        background-color: lavenderblush;
+        height: 10dvh;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100dvw;
+      }
+      #l-div {
+        display: flex;
+        height: 10dvh;
+        flex: 1;
+        background-color: aquamarine;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #r-div {
+        display: flex;
+        flex: 2;
+        height: 10dvh;
+        background-color: burlywood;
+        justify-content: space-around;
+        align-items: center;
+      }
+      section {
+        top: 100px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 60vh;
+      }
+      input {
+        height: 20px;
+        width: 200px;
+      }
+      #data {
+        /* background-color: tomato; */
+        height: 10%;
+        width: 50%;
+      }
+      li {
+        background-color: aquamarine;
+        padding: 15px;
+        margin: 10px;
+      }
     </style>
     <title>LAYOUT PRACTICE</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="head-div">
-            <div id="l-div">
-                <span>head</span>
-                <span>head2</span>
-            </div>
-            <div id="r-div">
-                <span>head3</span>
-                <span>head4</span>
-                <span>head5</span>
-            </div>
+      <div id="head-div">
+        <div id="l-div">
+          <span>head</span>
+          <span>head2</span>
         </div>
+        <div id="r-div">
+          <span>head3</span>
+          <span>head4</span>
+          <span>head5</span>
+        </div>
+      </div>
     </header>
     <main>
-        <section>
-            <input type="text" id="input">
-            <div>
-                <button id="ad">add</button>
-                <button id="up">update</button>
-                <button id="del">delete</button>
-            </div>
-                <ul id="data">
-                    <li></li>
-                </ul>
-        </section>
+      <section>
+        <input type="text" id="input" />
+        <div>
+          <button id="ad">add</button>
+          <button id="up">update</button>
+          <button id="del">delete</button>
+        </div>
+        <ul id="data"></ul>
+      </section>
     </main>
 
-<script>
-    var imp=document.getElementById('input')
-    var btnadd=document.getElementById('ad')
-    var btnup=document.getElementById('up')
-    var btndel=document.getElementById('del')
-    var lst=document.getElementById('data')
+    <script>
+      var imp = document.getElementById("input");
+      var btnadd = document.getElementById("ad");
+      var btnup = document.getElementById("up");
+      var btndel = document.getElementById("del");
+      var lst = document.getElementById("data");
+      var image = document.createElement("img");
 
-    btnadd.addEventListener('click',function(){
-        var val=document.createElement('li')
+      btnadd.addEventListener("click", function () {
+        var val = document.createElement("li");
         // val.appendChild(document.createTextNode(imp.value))
-        val.innerHTML=imp.value
-        lst.appendChild(val)
-    })
-    btndel.addEventListener('click',function(){
+        val.innerHTML = imp.value;
+        image.src = "/Internship/src/images/duke.png";
+        image.style.height = "50px";
+        image.style.width = "50px";
+        image.style.marginLeft = "600px";
+        val.appendChild(image); 
+        lst.appendChild(val);
+      });
+      btndel.addEventListener("click", function () {
         // var val=document.createElement('li')
-        var obj=lst.firstChild
+        var obj = lst.firstChild;
         // val.appendChild(document.createTextNode(imp.value))
         // val.innerHTML=imp.value
-        lst.removeChild(obj)
-        var lele=document.getElementsByTagName('li')
-        lele.addEventListener('click',function(e){
-        var val=e.target.closest('li')
-        lst.removeChild(val)
-    })
-    })
-    btnup.addEventListener('click',function(){
-        var obj=lst.firstChild
-        var val=document.createElement('li')
+        lst.removeChild(obj);
+
+        // var val=e.target.closest('li')
+        // lst.removeChild(val)
+      });
+      btnup.addEventListener("click", function () {
+        var obj = lst.firstChild;
+        var val = document.createElement("li");
         // val.appendChild(document.createTextNode(imp.value))
-        val.innerHTML=imp.value
-        lst.replaceChild(val,obj)
-    })
-
-</script>
-
-</body>
+        val.innerHTML = imp.value;
+        lst.replaceChild(val, obj);
+      });
+    </script>
+  </body>
 </html>
