@@ -20,6 +20,7 @@
       }
       .items {
         height: 100%;
+        border: 1px solid black;
       }
       div {
         display: flex;
@@ -28,7 +29,7 @@
         align-items: center;
         /* background-color: lightsteelblue; */
         text-align: center;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
     </style>
     <title>Fetch</title>
@@ -72,13 +73,16 @@
           .then((data) => console.log(data))
           .catch((err) => console.log("error"));
         database.remove();
-        for(i in arr){
-            console.log(arr[i]);
-            if(id==arr[i].id){
-                console.log('hello');
-                arr.remove(arr[i])
-            }
-            console.log(arr);
+        for (i in arr) {
+          console.log(id);
+          console.log(arr[i][id - 1]);
+          if (id == arr[i][id - 1].id) {
+            console.log("hello");
+            delete arr[i][id - 1];
+            console.log(arr[0]);
+          } else {
+            console.log("didnt work");
+          }
         }
       }
     </script>
