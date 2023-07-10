@@ -31,11 +31,16 @@
         text-align: center;
         /* border: 1px solid black; */
       }
+      .title{
+        background-color: lightpink;
+      }
     </style>
     <title>Fetch</title>
   </head>
   <body>
-    <section id="content"></section>
+    <section id="content">
+       
+    </section>
 
     <script>
       var arr = [];
@@ -49,10 +54,10 @@
           var datas = "";
           data.map((dta) => {
             datas += `<div class='items'>
-          <div>${dta.title}</div>
+          <div class="title">${dta.title}</div>
           <div><img src="${dta.image}"></div>
           <div>${dta.description}</div>
-          <div><button id='${dta.id}pst'>POST</button></div>
+          <div><button id='${dta.id}pst' onclick="posting('${dta.id}',event)">POST</button></div>
           <div><button id='${dta.id}del'class="deleteBtn" onClick="handleDelete('${dta.id}',event)">DELETE</button></div>
           </div>`;
           });
@@ -84,6 +89,24 @@
             console.log("didnt work");
           }
         }
+      }
+
+      function posting(id,e){
+        var title=document.getElementsByClassName('title')
+        fetch('https://fakestoreapi.com/products/'+id,
+        {method:'PUT',
+        headers:{'content-type':'application/json'},
+        body:JSON.stringify({
+          "title":"wears"
+        })})
+        .then(res=>res.json())
+        .then(data=>
+        {
+          console.log(data)
+          console.log(title.innerHTML);
+          
+        })
+        .catch(err=>console.log('error'))
       }
     </script>
   </body>

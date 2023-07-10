@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form fetch</title>
+</head>
+<body>
+        <form id="form" method="post">
+            <fieldset>
+                <legend>POST</legend>
+                <input type="text" placeholder="enter name" id="name">
+                <hr>
+                <input type="number" placeholder="enter number" id="number">
+                <hr>
+                <input type="submit">
+            </fieldset>
+        </form>
+        <p id="result"></p>
+
+        <script>
+            var form=document.getElementById('form')
+            form.addEventListener('submit',(e)=>{
+                e.preventDefault()
+
+                var name=document.getElementById('name').value
+                var number=document.getElementById('number').value
+
+                fetch('https://jsonplaceholder.typicode.com/posts',{
+                    method:"POST",headers:{
+                        'content-type':'application/json; charset=UTF-8'
+                    },body:JSON.stringify({
+                        name:name,
+                        number:number
+                    })
+                }).then(res=>res.json()).then(data=>{
+                    console.log(data);
+                    var result=document.getElementById('result')
+                    result.innerHTML=`your name is ${data.name} and your id is ${data.number}`
+                }).catch(err=>console.log('error'))
+            })
+        </script>
+
+</body>
+</html>
