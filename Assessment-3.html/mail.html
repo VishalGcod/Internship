@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Gmail</title>
+
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        background-color: rgb(245, 248, 252);
+        font-family: Roboto;
+      }
+      #gmailLogo {
+        width: 100px;
+      }
+      header {
+        height: 10dvh;
+        display: flex;
+        justify-content: space-between;
+      }
+      #loginImg {
+        border-radius: 50%;
+        width: 35px;
+        padding: 8px;
+      }
+      #image-logo {
+        display: flex;
+        height: 10dvh;
+        align-items: center;
+        margin-left: 2%;
+        width: 25%;
+      }
+      #SearchActivity {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #headSetAcc {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      #Search {
+        height: 60%;
+        width: 82%;
+        border: 0.5px solid grey;
+        outline: none;
+        border-radius: 25px;
+      }
+      #searchBtn {
+        position: absolute;
+        left: 27%;
+      }
+      #active {
+        outline: none;
+        border-radius: 25px;
+        border: 0.5px solid grey;
+        height: 60%;
+        width: 15%;
+      }
+      main {
+        height: 100dvh;
+        display: flex;
+      }
+      #aside {
+        /* height: 100dvh; */
+        width: 20%;
+        background-color: rgb(245, 248, 252);
+      }
+      #composeBtn {
+        border: none;
+        outline: none;
+        height: 60px;
+        width: 140px;
+        border-radius: 15px;
+        background-color: #c2e7ff;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 20px;
+      }
+      #mainSec {
+        border-radius: 25px;
+        /* height: 89dvh; */
+        width: 80%;
+        background-color: rgb(232, 232, 249);
+        overflow: auto;
+      }
+      #mainHeader {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        /* background-color: lightcyan; */
+        height: 6%;
+      }
+      #pages {
+        background-color: aliceblue;
+        height: 6%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #table-des {
+        /* overflow: auto; */
+      }
+      #user {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100px;
+      }
+      #user:hover {
+        border-bottom: 4px solid blue;
+      }
+      #todo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100px;
+      }
+      #todo:hover {
+        border-bottom: 4px solid blue;
+      }
+      #post {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100px;
+      }
+      #post:hover {
+        border-bottom: 4px solid blue;
+      }
+      #options {
+        margin-left: 12%;
+        height: 27dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 50%;
+        /* background-color: gold; */
+      }
+      #options span {
+        /* background-color: aqua; */
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #form {
+        display: flex;
+        flex-direction: column;
+      }
+      #Comp-Field {
+        position: absolute;
+        left: 75%;
+        bottom: 3%;
+        display: none;
+        /* height: 300px; */
+        width: 340px;
+        /* background-color: cadetblue; */
+      }
+      input {
+        height: 40px;
+        border: none;
+        border-bottom: 0.5px solid black;
+      }
+      .buttons {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <span id="image-logo"
+          ><img
+            src="/Internship/Assessment-3.html/Gmail2020.logo.png"
+            id="gmailLogo"
+            alt="logo"
+        /></span>
+        <span id="SearchActivity"
+          ><span id="searchBtn" class="material-symbols-outlined"> search </span
+          ><input type="search" id="Search" /><button id="active">
+            Active
+          </button></span
+        >
+        <span id="headSetAcc"
+          ><span class="material-symbols-outlined"> help </span>
+          <span class="material-symbols-outlined"> settings </span
+          ><span class="material-symbols-outlined"> apps </span>
+          <img
+            id="loginImg"
+            src="https://lh3.googleusercontent.com/ogw/AGvuzYaPHFxiaOtgepC5J9wnBRYw8BrscAJNrPP8bENj=s64-c-mo"
+            alt="login"
+        /></span>
+      </header>
+      <main>
+        <aside id="aside">
+          <button id="composeBtn">
+            <span class="material-symbols-outlined"> edit </span>Compose
+          </button>
+          <!-- Form -->
+          <div id="Comp-Field">
+            <form method="post" id="form">
+              <input type="text" id="sender" placeholder="title" />
+              <textarea
+                name="enter mail content"
+                id="textarea"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <input type="submit" />
+            </form>
+          </div>
+
+          <div id="options">
+            <span
+              ><span class="material-symbols-outlined"> all_inbox </span
+              >inbox</span
+            >
+            <span
+              ><span class="material-symbols-outlined"> grade </span
+              >Starred</span
+            >
+            <span
+              ><span class="material-symbols-outlined"> snooze </span
+              >Snoozed</span
+            >
+            <span
+              ><span class="material-symbols-outlined"> mark_email_read </span
+              >Sent</span
+            >
+            <span
+              ><span class="material-symbols-outlined"> draft </span>Draft</span
+            >
+          </div>
+        </aside>
+        <section id="mainSec">
+          <header id="mainHeader"></header>
+          <div id="pages">
+            <span id="post"
+              ><span class="material-symbols-outlined"> image </span>Post</span
+            >
+            <span id="todo"
+              ><span class="material-symbols-outlined"> calendar_month </span
+              >Todos</span
+            >
+            <span id="user"
+              ><span class="material-symbols-outlined"> person </span>
+              Users</span
+            >
+            <span></span>
+          </div>
+          <div id="table-des">
+            <table id="tableDatas">
+              <tr></tr>
+            </table>
+          </div>
+        </section>
+      </main>
+    </section>
+    <script>
+      // fetch-data-table
+
+      var post = document.getElementById("post");
+      post.addEventListener("click", function () {
+        var tble = document.getElementById("tableDatas");
+        fetch("https://jsonplaceholder.typicode.com/posts")
+          .then((res) => res.json())
+          .then((data) => {
+            var ele = "";
+            data.map((dta) => {
+              ele += `
+                <tr>
+                   <td>${dta.id}</td>
+                   <td>${dta.title}</td> 
+                   <td>${dta.body}</td>
+                   <td class="buttons"><button id="${dta.id}" onclick="updfunc(${dta.id},event)">Edit</button><button id="${dta.id}" onclick="delfunc(${dta.id},event)">Delete</button></td> 
+                </tr>
+                `;
+            });
+            tble.innerHTML = ele;
+          })
+          .catch((err) => console.log("error"));
+      });
+
+      var todos = document.getElementById("todo");
+      todos.addEventListener("click", function () {
+        var tble = document.getElementById("tableDatas");
+        fetch("https://jsonplaceholder.typicode.com/todos")
+          .then((res) => res.json())
+          .then((data) => {
+            var ele = "";
+            data.map((dta) => {
+              ele += `
+                <tr>
+                   <td>${dta.id}</td>
+                   <td>${dta.title}</td> 
+                   <td>${dta.completed}</td>
+                   <td class="buttons"><button onclick="updfunc(${dta.id},event)">Edit</button><button onclick="delfunc(${dta.id},event)">Delete</button></td> 
+                </tr>
+                `;
+            });
+            tble.innerHTML = ele;
+          })
+          .catch((err) => console.log("error"));
+      });
+
+      var user = document.getElementById("user");
+      user.addEventListener("click", function () {
+        var tble = document.getElementById("tableDatas");
+        fetch("https://jsonplaceholder.typicode.com/users")
+          .then((res) => res.json())
+          .then((data) => {
+            var ele = "";
+            data.map((dta) => {
+              ele += `
+                <tr>
+                   <td>${dta.id}</td>
+                   <td>${dta.name}</td> 
+                   <td>${dta.username}</td>
+                   <td>${dta.email}</td>
+                   <td>${
+                     dta.address.street +
+                     " " +
+                     dta.address.suite +
+                     " " +
+                     dta.address.city +
+                     " " +
+                     dta.address.zipcode +
+                     " " +
+                     dta.address.zipcode +
+                     " " +
+                     dta.address.geo.lat +
+                     " " +
+                     dta.address.geo.lng
+                   }</td>
+                   <td class="buttons"><button onclick="updfunc(${
+                     dta.id
+                   },event)">Edit</button><button onclick="delfunc(${
+                dta.id
+              },event)">Delete</button></td> 
+                </tr>
+                `;
+            });
+            tble.innerHTML = ele;
+          })
+          .catch((err) => console.log("error"));
+      });
+
+      //   form-post
+
+      var Compfield = document.getElementById("Comp-Field");
+      var composeBtn = document.getElementById("composeBtn");
+      var form = document.getElementById("form");
+      composeBtn.addEventListener("click", function () {
+        Compfield.style.display = "block";
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var sender = document.getElementById("sender").value;
+          var body = document.getElementById("textarea").value;
+          console.log(sender);
+          console.log(body);
+          fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json; charset-UTF-8",
+            },
+            body: JSON.stringify({
+              title: sender,
+              body: body,
+            }),
+          })
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.log("error"));
+        });
+      });
+
+      //   delete-btns
+
+      function delfunc(id, e) {
+        var del = e.target.closest("tr");
+        del.remove();
+        fetch("https://jsonplaceholder.typicode.com/posts/" + id, {
+          method: "DELETE",
+        })
+          .then((res) => {
+            if (res.ok) {
+              console.log("successful");
+            } else {
+              console.log("unsuccessful");
+            }
+            return res;
+          })
+          .then((res) => res.json())
+          .then((data) => alert("you have deleted" + id))
+          .catch((err) => console.log("error"));
+      }
+      function delfunc(id, e) {
+        var del = e.target.closest("tr");
+        del.remove();
+        fetch("https://jsonplaceholder.typicode.com/todos/" + id, {
+          method: "DELETE",
+        })
+          .then((res) => {
+            if (res.ok) {
+              console.log("successful");
+            } else {
+              console.log("unsuccessful");
+            }
+            return res;
+          })
+          .then((res) => res.json())
+          .then((data) => alert("you have deleted" + id))
+          .catch((err) => console.log("error"));
+      }
+      function delfunc(id, e) {
+        var del = e.target.closest("tr");
+        del.remove();
+        fetch("https://jsonplaceholder.typicode.com/users/" + id, {
+          method: "DELETE",
+        })
+          .then((res) => {
+            if (res.ok) {
+              console.log("successful");
+            } else {
+              console.log("unsuccessful");
+            }
+            return res;
+          })
+          .then((res) => res.json())
+          .then((data) => alert("you have deleted" + id))
+          .catch((err) => console.log("error"));
+      }
+
+      //   update-put
+
+      function updfunc(id, e) {
+        let title = prompt("enter updated title");
+        fetch("https://jsonplaceholder.typicode.com/posts/" + id, {
+          method: "PUT",
+          headers: {
+            "content-type": "application.json",
+          },
+          body: JSON.stringify({
+            title: title
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data))
+          .catch((err) => console.log("error"));
+      }
+    </script>
+  </body>
+</html>
