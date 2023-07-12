@@ -116,21 +116,42 @@
 //         console.log(s);
 // }
 
-let arr5=[10000,20000,15000]
-let sum=0
-for(let i of arr5){
-    sum=i+5000
-    console.log(sum);
-    // sum=0
-}
+// let arr5=[10000,20000,15000]
+// let sum=0
+// for(let i of arr5){
+//     sum=i+5000
+//     console.log(sum);
+//     // sum=0
+// }
 
-let spr1={name:'gv'}
-let spr2={
-    ...spr1
-}
-console.log(spr2);
+// let spr1={name:'gv'}
+// let spr2={
+//     ...spr1
+// }
+// console.log(spr2);
 
-let arg=(...nums)=>{
-    console.log(nums);
+// let arg=(...nums)=>{
+//     console.log(nums);
+// }
+// arg(1,2,3,4,5)
+
+// arr5=[...arr5,50000,30000]
+// console.log(arr5);
+
+// var arr1=[1,2,3]
+// var arr2=arr1
+// arr2.push(4)
+// console.log(arr1);
+// console.log(arr2);
+
+var arr5=[1,2,3,4,5,6,7]
+let para=document.getElementById('para')
+// let del=document.getElementById('del')
+// function del(){
+//     console.log('Hi')
+// }
+ const del=()=>{
+    arr5.slice(0,-1)
+    para.innerHTML=arr5
+    console.log(arr5)
 }
-arg(1,2,3,4,5)
