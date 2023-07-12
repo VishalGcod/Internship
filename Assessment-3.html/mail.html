@@ -22,7 +22,7 @@
       body {
         box-sizing: border-box;
         /* margin: 0; */
-        background-color: rgb(245, 248, 252);
+        background-color: rgb(233,241,251);
         font-family: Roboto;
       }
       #gmailLogo {
@@ -82,7 +82,7 @@
       #aside {
         /* height: 100dvh; */
         width: 20%;
-        background-color: rgb(245, 248, 252);
+        background-color:rgb(233,241,251);
       }
       #composeBtn {
         border: none;
@@ -100,7 +100,7 @@
         border-radius: 25px;
         /* height: 89dvh; */
         width: 80%;
-        background-color: rgb(232, 232, 249);
+        background-color: white;
         overflow: auto;
       }
       #mainHeader {
@@ -192,8 +192,20 @@
         box-shadow: 2px 2px 2px grey;
         border-radius: 3px;
       }
-      /* #row {
-        border: 1px solid black;
+      .title3 {
+        column-count: 2;
+      }
+      .title4 {
+        column-count: 2;
+      }
+      table th,
+      table td {
+        padding: 10px;
+        /* border: 0.001px solid black; */
+        box-shadow: 0.9px 0.9px 0.9px rgb(236, 235, 235);
+      }
+      /* tr {
+        background-color: bisque;
       } */
     </style>
   </head>
@@ -281,6 +293,13 @@
             >
             <span></span>
           </div>
+          <!-- <div id="titles">
+            <span>id</span>
+            <span></span>
+            <span>title</span>
+            <span></span>
+            <span>body</span>
+          </div> -->
           <div id="table-des">
             <table id="tableDatas">
               <tr></tr>
@@ -326,7 +345,7 @@
               ele += `
                 <tr>
                    <td>${dta.id}</td>
-                   <td class="title1">${dta.title}</td> 
+                   <td class="title1">${dta.title}</td>
                    <td class="title2">${dta.body}</td>
                    <td class="buttons"><button id="${dta.id}" onclick="updfunc(${dta.id},event)">Edit</button><button id="${dta.id}" onclick="delfunc(${dta.id},event)">Delete</button></td> 
                 </tr>
@@ -353,7 +372,7 @@
                    <td>${dta.id}</td>
                    <td class="title3">${dta.title}</td> 
                    <td class="title4">${dta.completed}</td>
-                   <td class="buttons"><button onclick="updfunc(${dta.id},event)">Edit</button><button onclick="delfunc(${dta.id},event)">Delete</button></td> 
+                   <td class="buttons"><button onclick="updfunc2(${dta.id},event)">Edit</button><button onclick="delfunc(${dta.id},event)">Delete</button></td> 
                 </tr>
                 `;
             });
@@ -393,7 +412,7 @@
                      " " +
                      dta.address.geo.lng
                    }</td>
-                   <td class="buttons"><button onclick="updfunc(${
+                   <td class="buttons"><button onclick="updfunc3(${
                      dta.id
                    },event)">Edit</button><button onclick="delfunc(${
                 dta.id
@@ -416,6 +435,7 @@
 
         form.addEventListener("submit", function (e) {
           e.preventDefault();
+          Compfield.style.display = "none";
           var sender = document.getElementById("sender").value;
           var body = document.getElementById("textarea").value;
           console.log(sender);
@@ -500,10 +520,12 @@
         var body = prompt("enter body for id" + id);
         var title1 = document.getElementsByClassName("title1");
         var title2 = document.getElementsByClassName("title2");
+
+        console.log(title1);
         fetch("https://jsonplaceholder.typicode.com/posts/" + id, {
           method: "PUT",
           headers: {
-            "content-type": "application.json",
+            "content-type": "application/json",
           },
           body: JSON.stringify({
             title: title,
@@ -520,62 +542,63 @@
           .catch((err) => console.log("error", err));
       }
 
-      //   function updfunc(id, e) {
-      //     var titledata = prompt("enter updated title for id" + id);
-      //     var completed = prompt("enter completed for id" + id);
-      //     var title3 = document.getElementsByClassName("title3");
-      //     var title4 = document.getElementsByClassName("title4");
-      //     fetch("https://jsonplaceholder.typicode.com/todos/" + id, {
-      //       method: "PUT",
-      //       headers: {
-      //         "content-type": "application.json",
-      //       },
-      //       body: JSON.stringify({
-      //         title: titledata,
-      //         completed: completed,
-      //       }),
-      //     })
-      //       .then((res) => res.json())
-      //       .then((data) => {
-      //         console.log("outside", data.id);
-      //         title3[data.id - 1].innerHTML = titledata;
-      //         title4[data.id - 1].innerHTML = completed;
-      //       })
-      //       .catch((err) => console.log("error", err));
-      //   }
+      function updfunc2(id, e) {
+        var titledata = prompt("enter updated title for id" + id);
+        var completed = prompt("enter completed for id" + id);
+        var title3 = document.getElementsByClassName("title3");
+        var title4 = document.getElementsByClassName("title4");
+        fetch("https://jsonplaceholder.typicode.com/todos/" + id, {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            title: titledata,
+            completed: completed,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("outside", data.id);
+            // console.log(title3[data.id])
+            title3[data.id - 1].innerHTML = titledata;
+            title4[data.id - 1].innerHTML = completed;
+          })
+          .catch((err) => console.log("error", err));
+      }
 
-      //   function updfunc(id, e) {
-      //     var name = prompt("enter updated name for id" + id);
-      //     var username = prompt("enter username for id" + id);
-      //     var email=promt("enter mail id" +id);
-      //     var addr=prompt("enter addr for id"+id)
+      function updfunc3(id, e) {
+        var name = prompt("enter updated name for id" + id);
+        var username = prompt("enter username for id" + id);
+        var email = prompt("enter mail id" + id);
+        var address = prompt("enter addr for id" + id);
 
-      //     var title5 = document.getElementsByClassName("title5");
-      //     var title6 = document.getElementsByClassName("title6");
-      //     var title7 = document.getElementsByClassName("title7");
-      //     var title8 = document.getElementsByClassName("title8");
-      //     fetch("https://jsonplaceholder.typicode.com/users/" + id,{
-      //       method: "PUT",
-      //       headers: {
-      //         "content-type": "application.json",
-      //       },
-      //       body: JSON.stringify({
-      //         name: name,
-      //         username: username,
-      //         email:email,
-      //         address:address
-      //       }),
-      //     })
-      //       .then((res) => res.json())
-      //       .then((data) => {
-      //         console.log("outside", data.id);
-      //         title5[data.id - 1].innerHTML = name;
-      //         title6[data.id - 1].innerHTML = username;
-      //         title7[data.id - 1].innerHTML = email;
-      //         title8[data.id - 1].innerHTML = addr;
-      //       })
-      //       .catch((err) => console.log("error", err));
-      //   }
+        var title5 = document.getElementsByClassName("title5");
+        var title6 = document.getElementsByClassName("title6");
+        var title7 = document.getElementsByClassName("title7");
+        var title8 = document.getElementsByClassName("title8");
+        fetch("https://jsonplaceholder.typicode.com/users/" + id, {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name,
+            username: username,
+            email: email,
+            address: address,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("outside", data.id);
+            title5[data.id - 1].innerHTML = name;
+            title6[data.id - 1].innerHTML = username;
+            title7[data.id - 1].innerHTML = email;
+            title8[data.id - 1].innerHTML = address;
+          })
+          .catch((err) => console.log("error", err));
+      }
     </script>
   </body>
 </html>
