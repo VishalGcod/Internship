@@ -111,10 +111,11 @@
           let ld = "";
           data.map((values) => {
             ld += `<tr>
-              <td>${values.title}</td>
+              <td class='tit'>${values.title}</td>
               <td>${values.description}</td>
               <td>${values.price}</td>
               <td><img src="${values.image}"/></td>
+              <button class='btn' onclick="edit(${values.id},event)">edit</button>
               </tr>`;
           });
           document.getElementById("debug").innerHTML = ld;
@@ -122,6 +123,13 @@
         .catch((err) => {
           console.log("error");
         });
+
+        var tit=document.getElementsByClassName('tit')
+        function edit(val,e){
+          console.log(val);
+          console.log();
+        }
+
     </script>
   </body>
 </html>

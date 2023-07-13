@@ -93,6 +93,7 @@
 
       function posting(id,e){
         var title=document.getElementsByClassName('title')
+      
         fetch('https://fakestoreapi.com/products/'+id,
         {method:'PUT',
         headers:{'content-type':'application/json'},
@@ -102,9 +103,7 @@
         .then(res=>res.json())
         .then(data=>
         {
-          console.log(data)
-          console.log(title.innerHTML);
-          
+          console.log(data)        
         })
         .catch(err=>console.log('error'))
       }

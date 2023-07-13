@@ -581,4 +581,7 @@ console.clear();
 // " 24"
 // "row 1"
 
-
+var obj=[{name:'gv',id:1,score:[100,100,100]},{name:'gvk',id:2,score:[50,75,100]}]
+var mapobj=obj.map(e=>{
+    console.log(e.score);
+})

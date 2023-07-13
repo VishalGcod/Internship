@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="images" id="opt" onchange="images1(event)"></select>
+    <div id="store"></div>
+    <script>
+      let b = {
+        img1: "/src/images/3D_Neptune.png",
+        img2: "/src/images/duke.png",
+        img3: "/src/images/Pluto.png",
+      };
+      let a = ["img1", "img2", "img3"];
+      var opt = document.getElementById("opt");
+      var ele = "";
+      a.map((e) => {
+        console.log(e);
+        ele += `<option class='clas'>${e}</option>`;
+        opt.innerHTML = ele;
+        // var data=document.createElement('option')
+        // data.innerHTML=e
+        // data.className='cls'
+        // console.log(data);
+        // opt.appendChild(data)
+      });
+      var store = document.getElementById("store");
+      function images1(e) {
+        var dat = e.target.value;
+        if (dat == "img1") {
+          var img = document.createElement("img");
+          img.src = b.img1;
+          store.appendChild(img);
+        } else if (dat == "img2") {
+          var img = document.createElement("img");
+          img.src = b.img2;
+          store.appendChild(img);
+        } else {
+          var img = document.createElement("img");
+          img.src = b.img3;
+          store.appendChild(img);
+        }
+      }
+
+      var obj = [
+        { name: "gv", id: 1, score: [100, 100, 100] },
+        { name: "gvk", id: 2, score: [50, 75, 100] },
+      ];
+      var mapobj = obj.map((e) => {
+        return (scores = e.score);
+      });
+      console.log(mapobj);
+
+      for (i in mapobj) {
+        var mapobj2 = mapobj[i].reduce((a, b) => {
+          return a + b;
+        });
+        var avg = mapobj2 / 3;
+        if (avg >= 90) {
+          console.log(avg);
+        }
+      }
+      var newobj = {};
+      newobj.name = obj[0].name;
+      newobj.score = obj[0].score;
+      newobj.avg = avg;
+      console.log(newobj);
+      var arr = [];
+      arr.push(newobj);
+    </script>
+  </body>
+</html>
