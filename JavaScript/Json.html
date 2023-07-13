@@ -111,11 +111,12 @@
           let ld = "";
           data.map((values) => {
             ld += `<tr>
-              <td class='tit'>${values.title}</td>
+              <td class='tit'>${values.title}
+                <button class='btn' onclick="edit(${values.id},event)">edit</button></td>
               <td>${values.description}</td>
               <td>${values.price}</td>
               <td><img src="${values.image}"/></td>
-              <button class='btn' onclick="edit(${values.id},event)">edit</button>
+              <button class='btn' onclick="edit2(${values.id},event)">edit</button>
               </tr>`;
           });
           document.getElementById("debug").innerHTML = ld;
@@ -125,9 +126,12 @@
         });
 
         var tit=document.getElementsByClassName('tit')
+        console.log(tit.innerText);
         function edit(val,e){
-          console.log(val);
-          console.log();
+          var p=prompt("enter")
+          var td=e.target.closest("td").innerText
+          console.log(td);
+          td.innerText=p
         }
 
     </script>
