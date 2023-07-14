@@ -18,7 +18,7 @@
 
     <script>
       const obj = {
-        dog: "Internship/JavaScript/dog.jpeg",
+        dog: "/Internship/JavaScript/dog.jpeg",
         chicken: "/Internship/JavaScript/chicken.jpeg",
         cat: "/Internship/JavaScript/cat.jpeg",
         rabbit: "/Internship/JavaScript/rabbit.webp",
@@ -39,8 +39,15 @@
         var img = document.getElementById("image");
         var images = e.target.value;
         if (e.target.value == "cat") {
-            
           img.src = obj.cat;
+        }else if(e.target.value == "dog"){
+            img.src = obj.dog;
+        }
+        else if(e.target.value == "rabbit"){
+            img.src = obj.rabbit;
+        }
+        else if(e.target.value == "chicken"){
+            img.src = obj.chicken;
         }
       }
     </script>
