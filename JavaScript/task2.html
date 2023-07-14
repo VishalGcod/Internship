@@ -64,23 +64,38 @@
     // let func=new person('emiley')
     // console.log(func);
 
-    let a={
-            ret :()=>{return this}
-    }
-    console.log(a.ret());
+    // let a={
+    //         ret :()=>{return this}
+    // }
+    // console.log(a.ret());
       
-    const c={
-        name:'frost',
-        a:function(){
-            return this
-        },
-        arrow:()=>{
-            return this
-        }
-    }
-    console.log(c.name);
-    console.log(c.a());
-    console.log(c.arrow());
+    // const c={
+    //     name:'frost',
+    //     a:function(){
+    //         return this
+    //     },
+    //     arrow:()=>{
+    //         return this
+    //     }
+    // }
+    // console.log(c.name);
+    // console.log(c.a());
+    // console.log(c.arrow());
+
+        let a=new Promise((resolve,rejected)=>{
+            b=1+1
+            if(b===2){
+                resolve('success')
+            }else{
+                rejected('rejected')
+            }
+        }).then((message)=>{
+            console.log(message);
+        }).catch((message)=>{
+            console.log(message);
+        })
+
     </script>
   </body>
 </html>
+ 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
+  <<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,23 +58,22 @@
       }
       }
          */
-         img{
-          height: 100px;
-          padding: 100px;
-         }
-         table{
-          border: 2px solid black;
-          border-collapse: collapse;
-         }
-         tr{
-          height: 200px;
-         }
-         td{
-          
-          border: 2px solid black;
-         }
-         #images{
-         }
+      img {
+        height: 100px;
+        padding: 100px;
+      }
+      table {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      tr {
+        height: 200px;
+      }
+      td {
+        border: 2px solid black;
+      }
+      #images {
+      }
     </style>
   </head>
   <body>
@@ -85,7 +84,7 @@
         <td></td>
         <td></td>
         <td id="images"></td>
-    </tbody>
+      </tbody>
     </table>
     <!-- <div id="div1"></div> -->
     <!-- <div id="div2"></div>
@@ -125,15 +124,14 @@
           console.log("error");
         });
 
-        var tit=document.getElementsByClassName('tit')
-        console.log(tit.innerText);
-        function edit(val,e){
-          var p=prompt("enter")
-          var td=e.target.closest("td").innerText
-          console.log(td);
-          td.innerText=p
-        }
-
+      var tit = document.getElementsByClassName("tit");
+      // console.log(tit.innerText);
+      function edit(val, e) {
+        var p = prompt("enter");
+        var td = e.target.closest("td");
+        console.log("Hey", td);
+        td.innerText = p;
+      }
     </script>
   </body>
 </html>
