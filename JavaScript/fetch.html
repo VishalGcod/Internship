@@ -93,7 +93,11 @@
 
       function posting(id,e){
         var title=document.getElementsByClassName('title')
+<<<<<<< HEAD
+      
+=======
         // console.log(title[1].innerHTML);
+>>>>>>> 9a89332b980a74d9ada4d027cc19ace531f5c1c9
         fetch('https://fakestoreapi.com/products/'+id,
         {method:'PUT',
         headers:{'content-type':'application/json'},
@@ -103,9 +107,13 @@
         .then(res=>res.json())
         .then(data=>
         {
+<<<<<<< HEAD
+          console.log(data)        
+=======
           console.log(data)
           title[data.id-1].innerHTML=data.title
           
+>>>>>>> 9a89332b980a74d9ada4d027cc19ace531f5c1c9
         })
         .catch(err=>console.log('error'))
       }
