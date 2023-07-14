@@ -17,12 +17,12 @@
     <img id="image"></img>
 
     <script>
-      const obj = [
-        {dog: "/Internship/JavaScript/dog.jpeg"},
-        {chicken: "/Internship/JavaScript/chicken.jpeg"},
-        {cat: "/Internship/JavaScript/cat.jpeg"},
-        {rabbit: "/Internship/JavaScript/rabbit.webp"}
-      ];
+      const obj = {
+        dog: "/Internship/JavaScript/dog.jpeg",
+        chicken: "/Internship/JavaScript/chicken.jpeg",
+        cat: "/Internship/JavaScript/cat.jpeg",
+        rabbit: "/Internship/JavaScript/rabbit.webp",
+      };
       var pets = ["dog", "cat", "chicken", "rabbit"];
       var img = document.getElementById("image");
       var dd = document.getElementsByClassName("data");
@@ -38,11 +38,6 @@
       function change(e) {
         var img = document.getElementById("image");
         var images = e.target.value;
-
-        for(i in )
-
-
-
         if (e.target.value == "cat") {
           img.src = obj.cat;
         }else if(e.target.value == "dog"){
@@ -55,14 +50,37 @@
             img.src = obj.chicken;
         }
       }
+
+    //   var fun=function(){console.log(arguments)};
+    //   fun('hello',2)
+
+    //   setTimeout(()=>{
+    //     console.log('hello');
+    //   },3000)
+
+    // function person(n){
+    //     this.nam=n
+    // }
+    // let func=new person('emiley')
+    // console.log(func);
+
+    let a={
+            ret :()=>{return this}
+    }
+    console.log(a.ret());
+      
+    const c={
+        name:'frost',
+        a:function(){
+            return this
+        },
+        arrow:()=>{
+            return this
+        }
+    }
+    console.log(c.name);
+    console.log(c.a());
+    console.log(c.arrow());
     </script>
   </body>
 </html>
-
-<!-- const obj = [{
-    dog: "/Internship/JavaScript/dog.jpeg",
-    chicken: "/Internship/JavaScript/chicken.jpeg",
-    cat: "/Internship/JavaScript/cat.jpeg",
-    {rabbit: "/Internship/JavaScript/rabbit.webp"}
-  }];
-  var p -->
