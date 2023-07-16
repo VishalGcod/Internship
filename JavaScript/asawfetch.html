@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(61, 60, 60);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <script>
+        const btn=document.getElementById("btn")
+        btn.addEventListener("click",async()=>{
+            try{
+            const f=await fetch('https://reqres.in/api/users',{method:'POST',headers:{
+                'content-type':'application.json'
+            },body:JSON.stringify({
+                name:'john',
+                job:'Carpenter'
+            })})
+            const r=await f.json()
+            console.log(r);
+            }catch(error){
+                console.log(error);
+            }
+        })
+    </script>
+</body>
+</html>
